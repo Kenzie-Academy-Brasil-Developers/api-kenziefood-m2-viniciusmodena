@@ -9,7 +9,6 @@ html, body{
     width: 100vw;
     height: 100vh;
 }
-
 nav{
     display: flex;
     flex-direction: column;
@@ -22,7 +21,14 @@ nav{
     background: #FFFFFF;
     box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
 }
-
+.nav-imgs{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-icon{
+    margin-top: 10px;
+}
 .nav-img{
     padding: 10px 0px 0px 10px;
     width: 122px;
@@ -30,12 +36,14 @@ nav{
     left: 18px;
     top: 21px;
 }
-
 .nav-input{
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 15px 18px 15px 16px;
+
+    margin-top: 50px;
+    margin-left: 10px;
 
     width: 342px;
     height: 49px;
@@ -55,6 +63,16 @@ nav{
     line-height: 19px;
 
     color: #868E96;
+}
+
+.nav-icon{
+    width: 36px;
+    height: 36px;
+    left: 1446px;
+    top: 17px;
+
+    background: #C4C4C4;
+    border-radius: 128.571px;
 }
 
 /*
@@ -97,7 +115,7 @@ main{
 .filters-panificadora{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
 
@@ -120,7 +138,7 @@ main{
 .filters-frutas{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
 
@@ -135,12 +153,14 @@ main{
     box-sizing: border-box;
     border-radius: 32px;
     margin: 0px 22px;
+    flex: none;
+    flex-grow: 0;
 }
 
 .filters-bebidas{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
 
@@ -155,6 +175,8 @@ main{
     box-sizing: border-box;
     border-radius: 32px;
     margin: 0px 22px;
+    flex: none;
+    flex-grow: 0;
 }
 
 button h5{
@@ -163,17 +185,12 @@ button h5{
     top: 84.39%;
     bottom: 4.05%;
     
-    /* Title2 */
-    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    /* identical to box height, or 143% */
-    
-    
-    /* grey-4 */
+
     
     color: #212529;
 }
@@ -193,12 +210,16 @@ VITRINE
 .vitrine-card{
     display: flex;
     flex-direction: column;
-    padding: 0px;
-
+    padding: 0px 0px 0px 0px;
     width: 303px;
     height: 397px;
     left: 18px;
     top: 250px;
+
+    margin-bottom: 30px;
+}
+.vitrine-card i{
+    color: #0CA678;
 }
 .vitrine-img{
     height: 200px;
@@ -213,9 +234,10 @@ VITRINE
     box-sizing: border-box;
     border-radius: 8px;
 }
-.vitrine-comprar{
+.vitrine-buy{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     width: 100%;
     left: 0%;
@@ -224,15 +246,18 @@ VITRINE
     bottom: 0%;
 
     flex-grow: 0;
-    margin: 16px 0px;
 }
-.vitrine-comprar button{
+.vitrine-buy button{
     background: #E4F7EF;
     border: none;
     border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    left: 0px;
+    top: 0px;
 }
 
-ul h3{
+.vitrine h3{
     left: 0%;
     right: 12.21%;
     top: 0%;
@@ -252,7 +277,7 @@ ul h3{
     margin: 16px 0px;
 }
 
-ul h5{
+.vitrine h5{
     left: 0%;
     right: 80.2%;
     top: 84.39%;
@@ -267,7 +292,7 @@ ul h5{
     color: #212529;
 }
 
-ul p{
+.vitrine p{
     left: 0%;
     right: 0%;
     top: 0%;
@@ -282,7 +307,7 @@ ul p{
     color: #868E96;
 }
 
-ul span{
+.vitrine span{
     left: 0%;
     right: 0%;
     top: 0%;
@@ -301,17 +326,32 @@ ul span{
 CARRINHO
 */
 
-.carrinho{}
-
+.carrinho{
+    display: none;
+}
 .carrinho-title{
     width: 374px;
+    height: 60px;
+    left: 0px;
+    top: 655px;
+    
+    background: #FF2253;
+    border-radius: 0px;
+}
+.carrinho-footer{
+    width: 100%;
     height: 60px;
     left: 0px;
     top: 655px;
 
     background: #FF2253;
     border-radius: 0px;
+    border: none;
 }
+.carrinho-footer i, .carrinho-footer h5{
+    color: white;
+}
+
 
 @media ( min-width: 375px ){
     nav{
@@ -329,7 +369,7 @@ CARRINHO
         box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
     }
     .nav-img{
-        margin-left: 100px;
+        margin-left: 190px;
     }
     .nav-input{
     display: flex;
@@ -341,8 +381,10 @@ CARRINHO
     height: 49px;
     left: 1173px;
     top: 12px;
-
-    margin-right: 100px;
+    
+    margin-top: 25px;
+    margin-right: 125px;
+    margin-bottom: 15px;
 
     background: #E9ECEF;
 
@@ -350,13 +392,45 @@ CARRINHO
     box-sizing: border-box;
     border-radius: 12px;
     }
-    
-    .filters{
-    width: 601px;
-    height: 48px;
-    left: 117px;
-    top: 122px;
+    .nav-icon{
+        position: relative;
     }
+    .nav-login{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /*
+    FILTERS
+    */
+
+    .filters{
+        width: 601px;
+        height: 48px;
+        left: 117px;
+        top: 122px;
+    
+    }
+
+    .filters-todos:hover{
+        border: solid 1px black;
+    }
+        
+    .filters-panificadora:hover{
+        border: solid 1px black;
+    }
+        
+    .filters-frutas:hover{
+        border: solid 1px black;
+    }
+        
+    .filters-bebidas:hover{
+        border: solid 1px black;
+    }
+
+    /*
+    VITRINE
+    */
 
     main{
         display: flex;
@@ -365,14 +439,23 @@ CARRINHO
         display: flex;
         flex-direction: column;
 
-        width: 75%;
+        margin-left: 175px;
+        width: 65%;
     }
     .vitrine{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
     }
+
+    .vitrine-card{
+        padding: 10px;
+    }
     
+    /*
+    CARRINHO
+    */
+
     .carrinho{
     display: flex;
     flex-direction: column;
@@ -383,6 +466,9 @@ CARRINHO
     top: 122px;
     }
     .carrinho-title{
+    display: flex;
+    align-items: center;
+
     width: 320px;
     height: 56px;
     left: 1166px;
@@ -399,9 +485,16 @@ CARRINHO
 
     color: #FFFFFF;
     }
+    .carrinho-title i{
+        margin-left: 30px;
+    }
+    .carrinho-title h5{
+        margin-left: 20px;
+    }
     .carrinho-ul{
         display: flex;
         justify-content: center;
+        flex-direction: column;
         align-items: center;
 
         width: 319px;
@@ -411,6 +504,9 @@ CARRINHO
 
         background: #F8F9FA;
         border-radius: 0px 0px 12px 12px;
+    }
+    .carrinho-ul i{
+        color: #868E96;
     }
     .carrinho-ul p{
     font-family: 'Poppins';
@@ -423,6 +519,8 @@ CARRINHO
 
     color: #868E96;
     }
-
+    .carrinho-footer{
+        display: none;
+    }
 
 }
