@@ -221,7 +221,7 @@ VITRINE
 .vitrine-card {
     display: flex;
     flex-direction: column;
-    padding: 0px 0px 0px 0px;
+    padding: 0px;
     width: 303px;
     height: 397px;
     left: 18px;
@@ -320,7 +320,13 @@ VITRINE
     line-height: 24px;
 
     color: #868E96;
+
 }
+
+/* .card-text {
+    height: 200px;
+    overflow-y: hidden;
+} */
 
 .vitrine span {
     left: 0%;
@@ -342,7 +348,7 @@ CARRINHO
 */
 
 .card {
-    display: none;
+    /* display: none; */
 }
 
 .card-title {
@@ -356,10 +362,10 @@ CARRINHO
 }
 
 .card-footer {
+    /* position: absolute; */
+    bottom: 0;
     width: 100%;
     height: 60px;
-    left: 0px;
-    top: 655px;
 
     background: #FF2253;
     border-radius: 0px;
@@ -496,7 +502,7 @@ CARRINHO
     */
 
     .card {
-        display: none;
+        /* display: none; */
         /* display: flex; */
         flex-direction: column;
 
@@ -575,6 +581,9 @@ CARRINHO
 /* 
 CARRINHO FULL
 */
+#card-full {
+    display: none;
+}
 
 .card-full--ul {
     height: 200px;
