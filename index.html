@@ -6,16 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/67d942ee47.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/home.css">
 </head>
 
 <body>
-    <nav>
-        <img class="nav-img" src="./imgs/logo.png">
-        <input class="nav-input" type="text" placeholder="Pesquisar por produto">
-    </nav>
-
+    <header>
+        <div class="header-imgs">
+            <img class="header-img" src="./src/img/logo.png">
+            <img class="header-icon--mobile" src="./src/img/userIcon.png">
+        </div>
+        <div class="header-rightside">
+            <input class="header-input" type="text" placeholder="Pesquisar por produto">
+            <img class="header-icon--desktop" src="./src/img/userIcon.png" alt="">
+        </div>
+    </header>
     <main>
         <div class="content">
             <div class="filters">
@@ -23,91 +29,170 @@
                     <h5>Todos</h5>
                 </button>
                 <button class="filters-panificadora">
+                    <p>🍞</p>
                     <h5>Panificadora</h5>
                 </button>
                 <button class="filters-frutas">
+                    <p>🍏</p>
                     <h5>Frutas</h5>
                 </button>
                 <button class="filters-bebidas">
+                    <p>🍷</p>
                     <h5>Bebidas</h5>
                 </button>
             </div>
             <div class="vitrine">
-                <ul class="vitrine-card">
-                    <img class="vitrine-img" src="./imgs/pancake.png">
+                <div class="vitrine-card">
+                    <img class="vitrine-img" src="./src/img/pancake.png">
                     <h3>Panqueca de banana com aveia</h3>
                     <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
                         se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
                     <span>Text Category</span>
                     <div class="vitrine-buy">
                         <h5>R$ 20,00</h5>
-                        <button><img src="./imgs/Text.png"></button>
+                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
                     </div>
-
-                <ul class="vitrine-card">
-                    <img class="vitrine-img" src="./imgs/pancake.png">
+                </div>
+                <div class="vitrine-card">
+                    <img class="vitrine-img" src="./src/img/pancake.png">
                     <h3>Panqueca de banana com aveia</h3>
                     <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                            se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
+                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
                     <span>Text Category</span>
                     <div class="vitrine-buy">
                         <h5>R$ 20,00</h5>
-                       <button><img src="./imgs/Text.png"></button>
-                        </div>
-                <ul class="vitrine-card">
-                    <img class="vitrine-img" src="./imgs/pancake.png">
+                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
+                    </div>
+                </div>
+                <div class="vitrine-card">
+                    <img class="vitrine-img" src="./src/img/pancake.png">
                     <h3>Panqueca de banana com aveia</h3>
                     <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                            se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
+                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
                     <span>Text Category</span>
                     <div class="vitrine-buy">
                         <h5>R$ 20,00</h5>
-                        <button><img src="./imgs/Text.png"></button>
+                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
                     </div>
-                <ul class="vitrine-card">
-                            <img class="vitrine-img" src="./imgs/pancake.png">
-                            <h3>Panqueca de banana com aveia</h3>
-                            <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                                    se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                            <span>Text Category</span>
-                            <div class="vitrine-buy">
-                                <h5>R$ 20,00</h5>
-                                <button><img src="./imgs/Text.png"></button>
-                            </div>
-                <ul class="vitrine-card">
-                                <img class="vitrine-img" src="./imgs/pancake.png">
-                                <h3>Panqueca de banana com aveia</h3>
-                                <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                                <span>Text Category</span>
-                                <div class="vitrine-buy">
-                                    <h5>R$ 20,00</h5>
-                                    <button><img src="./imgs/Text.png"></button>
-                                </div>
-                <ul class="vitrine-card">
-                                    <img class="vitrine-img" src="./imgs/pancake.png">
-                                    <h3>Panqueca de banana com aveia</h3>
-                                    <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                                            se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.
-                                    </p>
-                                    <span>Text Category</span>
-                                <div class="vitrine-buy">
-                                    <h5>R$ 20,00</h5>
-                                    <button><img src="./imgs/Text.png"></button>
-                                </div>
+                </div>
+                <div class="vitrine-card">
+                    <img class="vitrine-img" src="./src/img/pancake.png">
+                    <h3>Panqueca de banana com aveia</h3>
+                    <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
+                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
+                    <span>Text Category</span>
+                    <div class="vitrine-buy">
+                        <h5>R$ 20,00</h5>
+                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
+                    </div>
+                </div>
+                <div class="vitrine-card">
+                    <img class="vitrine-img" src="./src/img/pancake.png">
+                    <h3>Panqueca de banana com aveia</h3>
+                    <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
+                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
+                    <span>Text Category</span>
+                    <div class="vitrine-buy">
+                        <h5>R$ 20,00</h5>
+                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
+                    </div>
+                </div>
+                <div class="vitrine-card">
+                    <img class="vitrine-img" src="./src/img/pancake.png">
+                    <h3>Panqueca de banana com aveia</h3>
+                    <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
+                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.
+                    </p>
+                    <span>Text Category</span>
+                    <div class="vitrine-buy">
+                        <h5>R$ 20,00</h5>
+                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="carrinho">
-            <div class="carrinho-title">Carrinho</div>
-            <ul class="carrinho-ul">
-                <p>Por enquanto não temos produtos no carrinho</p>
+        <div class="card">
+            <div class="card-title">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                <h5>Carrinho</h5>
+            </div>
+            <ul class="card-ul">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Por enquanto não temos produtos no card</p>
             </ul>
+        </div>
+
+        <div id="card-full">
+            <div class="card-title">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                <h5>Carrinho</h5>
+            </div>
+            <div class="card-full--ul">
+                <div class="card-full--li">
+                    <div class="card-full--divimg">
+                        <img src="./src/img/pancake.png" class="card-full-img">
+                    </div>
+                    <div class="card-full--divinfo">
+                        <h3>Panqueca de banana</h3>
+                        <span>Panificadora</span>
+                        <h5>R$ 12,00</h5>
+                    </div>
+                    <div class="card-full--divtrash">
+                        <button class="card-full--trash"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+                <div class="card-full--li">
+                    <div class="card-full--divimg">
+                        <img src="./src/img/pancake.png" class="card-full-img">
+                    </div>
+                    <div class="card-full--divinfo">
+                        <h3>Panqueca de banana</h3>
+                        <span>Panificadora</span>
+                        <h5>R$ 12,00</h5>
+                    </div>
+                    <div class="card-full--divtrash">
+                        <button class="card-full--trash"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+                <div class="card-full--li">
+                    <div class="card-full--divimg">
+                        <img src="./src/img/pancake.png" class="card-full-img">
+                    </div>
+                    <div class="card-full--divinfo">
+                        <h3>Panqueca de banana</h3>
+                        <span>Panificadora</span>
+                        <h5>R$ 12,00</h5>
+                    </div>
+                    <div class="card-full--divtrash">
+                        <button class="card-full--trash"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+                <div class="card-full--li">
+                    <div class="card-full--divimg">
+                        <img src="./src/img/pancake.png" class="card-full-img">
+                    </div>
+                    <div class="card-full--divinfo">
+                        <h3>Panqueca de banana</h3>
+                        <span>Panificadora</span>
+                        <h5>R$ 12,00</h5>
+                    </div>
+                    <div class="card-full--divtrash">
+                        <button class="card-full--trash"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="card-full--amount"><h5>Quantidade</h5><h5>2</h5></div>
+            <div class="card-full--total"><h5>Total</h5><h5>R$ 12,00</h5></div>
         </div>
     </main>
 
 
-    <footer></footer>
+        <button class="card-footer">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <h5>Carrinho</h5>
+        </button>
 </body>
 
 </html>
