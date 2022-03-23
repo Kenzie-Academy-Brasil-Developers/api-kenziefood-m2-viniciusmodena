@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Montserrat:wght@200;400&family=Poppins:wght@500&display=swap');
 
 /*
-NAV
+header
 */
 
 html, body{
@@ -10,7 +10,7 @@ html, body{
     height: 100vh;
     overflow-x: hidden;
 }
-nav{
+header{
     display: flex;
     flex-direction: column;
 
@@ -22,22 +22,22 @@ nav{
     background: #FFFFFF;
     box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
 }
-.nav-imgs{
+.header-imgs{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.nav-icon--mobile{
+.header-icon--mobile{
     margin-top: 10px;
 }
-.nav-img{
+.header-img{
     padding: 10px 0px 0px 10px;
     width: 122px;
     height: 33px;
     left: 18px;
     top: 21px;
 }
-.nav-input{
+.header-input{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,7 +66,7 @@ nav{
     color: #868E96;
 }
 
-.nav-icon{
+.header-icon{
     width: 36px;
     height: 36px;
     left: 1446px;
@@ -76,7 +76,7 @@ nav{
     border-radius: 128.571px;
 }
 
-.nav-icon--desktop {
+.header-icon--desktop {
     display: none;
 }
 
@@ -331,10 +331,10 @@ VITRINE
 CARRINHO
 */
 
-.carrinho{
+.card{
     display: none;
 }
-.carrinho-title{
+.card-title{
     width: 374px;
     height: 60px;
     left: 0px;
@@ -343,7 +343,7 @@ CARRINHO
     background: #FF2253;
     border-radius: 0px;
 }
-.carrinho-footer{
+.card-footer{
     width: 100%;
     height: 60px;
     left: 0px;
@@ -353,13 +353,13 @@ CARRINHO
     border-radius: 0px;
     border: none;
 }
-.carrinho-footer i, .carrinho-footer h5{
+.card-footer i, .card-footer h5{
     color: white;
 }
 
 
 @media ( min-width: 450px ){
-    nav{
+    header{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -373,10 +373,10 @@ CARRINHO
         background: #FFFFFF;
         box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
     }
-    .nav-img{
+    .header-img{
         margin-left: 190px;
     }
-    .nav-input{
+    .header-input{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -406,17 +406,18 @@ CARRINHO
         margin-right: 118px;
     }
 
-    .nav-icon--mobile{
+    .header-icon--mobile{
         display: none;
     }
 
-    .nav-icon--desktop {
+    .header-icon--desktop {
         display: block;
         height: 36px;
         width: auto;
+        cursor: pointer;
     }
 
-    .nav-login{
+    .header-login{
         display: flex;
         justify-content: space-evenly;
     }
@@ -474,10 +475,10 @@ CARRINHO
     }
     
     /*
-    CARRINHO
+    card
     */
 
-    .carrinho{
+    .card{
     display: flex;
     flex-direction: column;
 
@@ -486,7 +487,7 @@ CARRINHO
     left: 1166px;
     top: 122px;
     }
-    .carrinho-title{
+    .card-title{
     display: flex;
     align-items: center;
 
@@ -506,13 +507,13 @@ CARRINHO
 
     color: #FFFFFF;
     }
-    .carrinho-title i{
+    .card-title i{
         margin-left: 30px;
     }
-    .carrinho-title h5{
+    .card-title h5{
         margin-left: 20px;
     }
-    .carrinho-ul{
+    .card-ul{
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -526,10 +527,10 @@ CARRINHO
         background: #F8F9FA;
         border-radius: 0px 0px 12px 12px;
     }
-    .carrinho-ul i{
+    .card-ul i{
         color: #868E96;
     }
-    .carrinho-ul p{
+    .card-ul p{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -540,8 +541,112 @@ CARRINHO
 
     color: #868E96;
     }
-    .carrinho-footer{
+    .card-footer{
         display: none;
     }
 
+}
+
+/* 
+CARRINHO FULL
+*/
+
+
+.card-full--li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 319px;
+    height: 84px;
+    left: 9.5px;
+    top: 386px;
+
+    background-color: white;
+}
+
+.card-full-img{
+    width: 70px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
+    border-radius: 8px;
+}
+
+.card-full--divimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-full--divinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-full--divinfo h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+
+    color: #000000;
+}
+.card-full--divinfo span{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 24px;
+
+    color: #868E96;
+}
+.card-full--divinfo h5, .card-full--amount h5, .card-full--total h5{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    padding: 0px 25px;
+    color: #212529;
+}
+.card-full--divtrash{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.card-full--trash{
+    width: 25px;
+    height: 25px;
+    left: 275px;
+    top: 0px;
+
+    border: none;
+    background: #F8F9FA;
+    border-radius: 4px;
+}
+.card-full--amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 319px;
+    height: 58px;
+    left: 1165px;
+    top: 589px;
+
+    background: #F8F9FA;
+}
+.card-full--total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 319px;
+    height: 58px;
+    left: 1165px;
+    top: 589px;
+
+    background: white;
 }
