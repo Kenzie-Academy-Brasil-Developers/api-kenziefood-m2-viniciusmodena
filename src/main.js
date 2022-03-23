@@ -7,4 +7,3 @@ import { Api } from "./controller/api.js"
 //     email: 'modena@gmail.com',
 //     password: 'equipe1'
 // }
-
