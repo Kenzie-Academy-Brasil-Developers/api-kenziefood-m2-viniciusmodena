@@ -5,39 +5,44 @@
 header
 */
 
-html, body{
+html, body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
 }
-header{
+
+header {
     display: flex;
     flex-direction: column;
 
     width: 100%;
     height: 72px;
-    left: 0px; 
+    left: 0px;
     top: 0px;
 
     background: #FFFFFF;
     box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
 }
-.header-imgs{
+
+.header-imgs {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.header-icon--mobile{
+
+.header-icon--mobile {
     margin-top: 10px;
 }
-.header-img{
+
+.header-img {
     padding: 10px 0px 0px 10px;
     width: 122px;
     height: 33px;
     left: 18px;
     top: 21px;
 }
-.header-input{
+
+.header-input {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -66,7 +71,7 @@ header{
     color: #868E96;
 }
 
-.header-icon{
+.header-icon {
     width: 36px;
     height: 36px;
     left: 1446px;
@@ -84,16 +89,16 @@ header{
 MAIN
 */
 
-main{
+main {
     margin-top: 100px
 }
 
-.filters{
+.filters {
     display: flex;
     flex-direction: row;
 }
 
-.filters-todos{
+.filters-todos {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -106,18 +111,18 @@ main{
     top: 122px;
 
     background: #FF2253;
-    
+
     border: 1.5px solid #FF2253;
     box-sizing: border-box;
     border-radius: 32px;
     margin: 0px 22px;
 }
 
-.filters-todos h5{
+.filters-todos h5 {
     color: white;
 }
 
-.filters-panificadora{
+.filters-panificadora {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -140,7 +145,7 @@ main{
     margin: 0px 22px;
 }
 
-.filters-frutas{
+.filters-frutas {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -162,7 +167,7 @@ main{
     flex-grow: 0;
 }
 
-.filters-bebidas{
+.filters-bebidas {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -184,19 +189,19 @@ main{
     flex-grow: 0;
 }
 
-button h5{
+button h5 {
     left: 0%;
     right: 80.2%;
     top: 84.39%;
     bottom: 4.05%;
-    
+
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
 
-    
+
     color: #212529;
 }
 
@@ -204,7 +209,7 @@ button h5{
 VITRINE
 */
 
-.vitrine{
+.vitrine {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -212,7 +217,8 @@ VITRINE
     margin-top: 20px;
     padding: 0px 0px 0px 18px;
 }
-.vitrine-card{
+
+.vitrine-card {
     display: flex;
     flex-direction: column;
     padding: 0px 0px 0px 0px;
@@ -223,10 +229,12 @@ VITRINE
 
     margin-bottom: 30px;
 }
-.vitrine-card i{
+
+.vitrine-card i {
     color: #0CA678;
 }
-.vitrine-img{
+
+.vitrine-img {
     height: 200px;
     width: 300px;
 
@@ -239,7 +247,8 @@ VITRINE
     box-sizing: border-box;
     border-radius: 8px;
 }
-.vitrine-buy{
+
+.vitrine-buy {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -252,7 +261,8 @@ VITRINE
 
     flex-grow: 0;
 }
-.vitrine-buy button{
+
+.vitrine-buy button {
     background: #E4F7EF;
     border: none;
     border-radius: 50%;
@@ -262,7 +272,7 @@ VITRINE
     top: 0px;
 }
 
-.vitrine h3{
+.vitrine h3 {
     left: 0%;
     right: 12.21%;
     top: 0%;
@@ -282,7 +292,7 @@ VITRINE
     margin: 16px 0px;
 }
 
-.vitrine h5{
+.vitrine h5 {
     left: 0%;
     right: 80.2%;
     top: 84.39%;
@@ -297,7 +307,7 @@ VITRINE
     color: #212529;
 }
 
-.vitrine p{
+.vitrine p {
     left: 0%;
     right: 0%;
     top: 0%;
@@ -312,7 +322,7 @@ VITRINE
     color: #868E96;
 }
 
-.vitrine span{
+.vitrine span {
     left: 0%;
     right: 0%;
     top: 0%;
@@ -331,19 +341,21 @@ VITRINE
 CARRINHO
 */
 
-.card{
+.card {
     display: none;
 }
-.card-title{
+
+.card-title {
     width: 374px;
     height: 60px;
     left: 0px;
     top: 655px;
-    
+
     background: #FF2253;
     border-radius: 0px;
 }
-.card-footer{
+
+.card-footer {
     width: 100%;
     height: 60px;
     left: 0px;
@@ -353,13 +365,14 @@ CARRINHO
     border-radius: 0px;
     border: none;
 }
-.card-footer i, .card-footer h5{
+
+.card-footer i, .card-footer h5 {
     color: white;
 }
 
 
-@media ( min-width: 450px ){
-    header{
+@media (min-width: 450px) {
+    header {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -373,30 +386,32 @@ CARRINHO
         background: #FFFFFF;
         box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
     }
-    .header-img{
+
+    .header-img {
         margin-left: 190px;
     }
-    .header-input{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    /* padding: 15px 18px 15px 16px; */
 
-    width: 312px;
-    height: 49px;
-    left: 1173px;
-    top: 12px;
-    
-    margin-top: 0;
-    margin-right: 34px;
-    margin-bottom: 0;
+    .header-input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* padding: 15px 18px 15px 16px; */
 
-    background: #E9ECEF;
+        width: 312px;
+        height: 49px;
+        left: 1173px;
+        top: 12px;
 
-    border: 1.5px solid #E9ECEF;
-    box-sizing: border-box;
-    border-radius: 12px;
+        margin-top: 0;
+        margin-right: 34px;
+        margin-bottom: 0;
+
+        background: #E9ECEF;
+
+        border: 1.5px solid #E9ECEF;
+        box-sizing: border-box;
+        border-radius: 12px;
     }
 
     .header-rightside {
@@ -406,7 +421,7 @@ CARRINHO
         margin-right: 118px;
     }
 
-    .header-icon--mobile{
+    .header-icon--mobile {
         display: none;
     }
 
@@ -417,7 +432,7 @@ CARRINHO
         cursor: pointer;
     }
 
-    .header-login{
+    .header-login {
         display: flex;
         justify-content: space-evenly;
     }
@@ -426,27 +441,27 @@ CARRINHO
     FILTERS
     */
 
-    .filters{
+    .filters {
         width: 601px;
         height: 48px;
         left: 117px;
         top: 122px;
-    
+
     }
 
-    .filters-todos:hover{
+    .filters-todos:hover {
         border: solid 1px black;
     }
-        
-    .filters-panificadora:hover{
+
+    .filters-panificadora:hover {
         border: solid 1px black;
     }
-        
-    .filters-frutas:hover{
+
+    .filters-frutas:hover {
         border: solid 1px black;
     }
-        
-    .filters-bebidas:hover{
+
+    .filters-bebidas:hover {
         border: solid 1px black;
     }
 
@@ -454,66 +469,73 @@ CARRINHO
     VITRINE
     */
 
-    main{
+    main {
         display: flex;
     }
-    .content{
+
+    .content {
         display: flex;
         flex-direction: column;
 
         margin-left: 175px;
         width: 65%;
     }
-    .vitrine{
+
+    .vitrine {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
     }
 
-    .vitrine-card{
+    .vitrine-card {
         padding: 10px;
     }
-    
+
     /*
     card
     */
 
-    .card{
-    display: flex;
-    flex-direction: column;
+    .card {
+        display: none;
+        /* display: flex; */
+        flex-direction: column;
 
-    width: 320px;
-    height: 352px;
-    left: 1166px;
-    top: 122px;
+        width: 320px;
+        height: 352px;
+        left: 1166px;
+        top: 122px;
     }
-    .card-title{
-    display: flex;
-    align-items: center;
 
-    width: 320px;
-    height: 56px;
-    left: 1166px;
-    top: 122px;
-        
-    background: #FF2253;
-    border-radius: 12px 12px 0px 0px;
+    .card-title {
+        display: flex;
+        align-items: center;
 
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 27px;
+        width: 320px;
+        height: 56px;
+        left: 1166px;
+        top: 122px;
 
-    color: #FFFFFF;
+        background: #FF2253;
+        border-radius: 12px 12px 0px 0px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 27px;
+
+        color: #FFFFFF;
     }
-    .card-title i{
+
+    .card-title i {
         margin-left: 30px;
     }
-    .card-title h5{
+
+    .card-title h5 {
         margin-left: 20px;
     }
-    .card-ul{
+
+    .card-ul {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -527,21 +549,24 @@ CARRINHO
         background: #F8F9FA;
         border-radius: 0px 0px 12px 12px;
     }
-    .card-ul i{
+
+    .card-ul i {
         color: #868E96;
     }
-    .card-ul p{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
 
-    text-align: center;
+    .card-ul p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
 
-    color: #868E96;
+        text-align: center;
+
+        color: #868E96;
     }
-    .card-footer{
+
+    .card-footer {
         display: none;
     }
 
@@ -551,8 +576,12 @@ CARRINHO
 CARRINHO FULL
 */
 
+.card-full--ul {
+    height: 200px;
+    overflow-y: auto;
+}
 
-.card-full--li{
+.card-full--li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -564,7 +593,7 @@ CARRINHO FULL
     background-color: white;
 }
 
-.card-full-img{
+.card-full-img {
     width: 70px;
     height: 70px;
     left: 0px;
@@ -573,17 +602,19 @@ CARRINHO FULL
     border-radius: 8px;
 }
 
-.card-full--divimg{
+.card-full--divimg {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.card-full--divinfo{
+
+.card-full--divinfo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.card-full--divinfo h3{
+
+.card-full--divinfo h3 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -592,7 +623,8 @@ CARRINHO FULL
 
     color: #000000;
 }
-.card-full--divinfo span{
+
+.card-full--divinfo span {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 200;
@@ -601,7 +633,8 @@ CARRINHO FULL
 
     color: #868E96;
 }
-.card-full--divinfo h5, .card-full--amount h5, .card-full--total h5{
+
+.card-full--divinfo h5, .card-full--amount h5, .card-full--total h5 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -611,12 +644,14 @@ CARRINHO FULL
     padding: 0px 25px;
     color: #212529;
 }
-.card-full--divtrash{
+
+.card-full--divtrash {
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
-.card-full--trash{
+
+.card-full--trash {
     width: 25px;
     height: 25px;
     left: 275px;
@@ -626,7 +661,8 @@ CARRINHO FULL
     background: #F8F9FA;
     border-radius: 4px;
 }
-.card-full--amount{
+
+.card-full--amount {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -638,7 +674,8 @@ CARRINHO FULL
 
     background: #F8F9FA;
 }
-.card-full--total{
+
+.card-full--total {
     display: flex;
     justify-content: space-between;
     align-items: center;
