@@ -48,22 +48,12 @@
           </div>
         </form>
         <button id="btn-login">Logar</button>
-        <button
-          class="open-modal"
-          onclick="document.querySelector('.modal').style.display='flex'"
-        >
-          Cadastre se aqui
-        </button>
+        <button class="open-modal">Cadastre se aqui</button>
       </section>
     </main>
     <div class="modal hidden">
       <section class="section-register">
-        <button
-          class="close-modal"
-          onclick="document.querySelector('.modal').style.display='none'"
-        >
-          x
-        </button>
+        <button class="close-modal">x</button>
 
         <h2>Cadastrar novo Usuario</h2>
         <form>
@@ -80,13 +70,23 @@
             placeholder="Insira seu email"
           /><br />
           <label for="register-password">Senha:</label><br />
-          <input type="password" placeholder="Insira uma senha" /><br />
-          <label for="register-password-confirmation">Confirme sua senha:</label
+          <input
+            type="password"
+            id="register-password"
+            placeholder="Insira uma senha"
+          /><br />
+          <!-- <label for="register-password-confirmation">Confirme sua senha:</label
           ><br />
-          <input type="password" placeholder="Insira sua senha novamente" />
+          <input type="password" id="register-password-confirmation" placeholder="Insira sua senha novamente" /> -->
         </form>
-        <button type="submit" id="register-new-user">Cadastrar</button>
+        <button id="btn-register-new-user">Cadastrar</button>
       </section>
     </div>
+    <div class="modal-invalid hidden">
+      <div class="mesage">
+        <p>Preencha todos os campos</p>
+      </div>
+    </div>
+    <script type="module" src="./../login.js"></script>
   </body>
 </html>
