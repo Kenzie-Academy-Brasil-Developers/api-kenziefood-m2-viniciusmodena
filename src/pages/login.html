@@ -1,44 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../styles/reset.css" />
+    <link rel="stylesheet" href="./../styles/login.css" />
     <title>Login/Register</title>
-</head>
-<body> 
-    <header>        
-        <div class="logo">
-            <a href="./../../index.html">
-                <h1>Kenzie <span>Food</span></h1>
-            </a>
-        </div>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./../../index.html">
+          <h1>Kenzie <span>Food</span></h1>
+        </a>
+      </div>
     </header>
     <main>
-        <section class="section-login">
-            <h2>Login</h2>
-            <form>
-                <label for="login-email">Login</label>
-                <input type="text" id="login-email" placeholder="Insira seu email">
-                <label for="login-password">Senha</label>]
-                <input type="password" id="login-password" placeholder="Insira sua senha">
-                <button id="btn-login">Efetuar Login</button>
-            </form>
-        </section>
-        <section class="section-register">
-            <h2>Register</h2>
-            <form>
-                <label for="register-name">Nome Completo</label>
-                <input type="text" id="register-name" placeholder="Insira seu nome completo">
-                <label for="register-email">Email</label>
-                <input type="email" id="register-email" placeholder="Insira seu Email">
-                <label for="register-password">Senha</label>
-                <input type="password" placeholder="Insira uma senha">
-                <label for="register-password-confirmation">Confirme sua senha</label>
-                <input type="password" placeholder="Insira sua senha novamente">
-                <button type="submit" id="register-new-user">Efetuar Cadastro</button>
-            </form>
-        </section>
+      <section class="section-login">
+        <h2>Login</h2>
+        <form>
+          <div>
+            <label for="login-email">Login:</label><br />
+            <input
+              type="text"
+              id="login-email"
+              placeholder="Insira seu email"
+            /><br />
+            <label for="login-password">Senha:</label><br />
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Insira sua senha"
+            />
+          </div>
+        </form>
+        <button id="btn-login">Logar</button>
+        <button
+          class="open-modal"
+          onclick="document.querySelector('.modal').style.display='flex'"
+        >
+          Cadastre se aqui
+        </button>
+      </section>
     </main>
-</body>
+    <div class="modal hidden">
+      <section class="section-register">
+        <button
+          class="close-modal"
+          onclick="document.querySelector('.modal').style.display='none'"
+        >
+          x
+        </button>
+
+        <h2>Cadastrar novo Usuario</h2>
+        <form>
+          <label for="register-name">Nome Completo:</label><br /><br />
+          <input
+            type="text"
+            id="register-name"
+            placeholder="Insira seu nome completo"
+          /><br />
+          <label for="register-email">Email:</label><br />
+          <input
+            type="email"
+            id="register-email"
+            placeholder="Insira seu email"
+          /><br />
+          <label for="register-password">Senha:</label><br />
+          <input type="password" placeholder="Insira uma senha" /><br />
+          <label for="register-password-confirmation">Confirme sua senha:</label
+          ><br />
+          <input type="password" placeholder="Insira sua senha novamente" />
+        </form>
+        <button type="submit" id="register-new-user">Cadastrar</button>
+      </section>
+    </div>
+  </body>
 </html>
