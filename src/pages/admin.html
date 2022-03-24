@@ -10,16 +10,16 @@
 </head>
 <body>
     <header>
-        <img class="nav-img" src="../img/logo.png">
-        <div class="nav-right">
-            <input class="nav-input" type="text" placeholder="Pesquisar por produto">
+        <img class="header-img" src="../img/logo.png">
+        <div class="header-right">
+            <input class="header-input" type="text" placeholder="Pesquisar por produto">
             <img class="user-img" src="../img/user.png" alt="icone usuário">
         </div> 
     </header>
 
     <main>
-        <div class="content">
-            <div class="filters">
+        <section class="main-buttons">
+            <section class="filters">
                 <button class="filters-todos">
                     <h5>Todos</h5>
                 </button>
@@ -32,134 +32,159 @@
                 <button class="filters-bebidas">
                     <h5>Bebidas</h5>
                 </button>
-                <button class="adc-product">
+                <button class="add-product">
                     <h5>Adicionar novo produto</h5>
                 </button>
-            </div>
+            </section>
+            <button class="add-new-product-button">Adicionar novo produto</button>
+        </section>
 
-            <div class="vitrine">
-                <ul>
-                    <span>Produto</span> <span>Categoria</span> <span>Descrição</span> <span>Ações</span>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
+            <section class="dashboard-section">
+
+                <div class="dashboard-header">
+                    <span class="card-header-product">Produto</span>
+                    <span class="card-header-category">Categoria</span>
+                    <span class="card-header-description">Descrição</span>
+                    <span class="card-header-actions">Ações</span>
+                </div>
+
+                <ul class="dashboard-list">
+                    <li class="card-dashboard">
+
+                        <div class="card-product">
+                            <img src="./../img/user.png" alt="panqueca de banana">
+                            <p class="card-name">Panqueca de banana com aveia</p>
+                        </div>
+
+                        <div class="card-categories">
+                            <span>Frutas</span>
+                            <span>Doce</span>
+                            <span>Bebida</span>
+                        </div>
+
+                        <div class="card-description">
+                            <p>Esta receita serve muito bem 2 pessoas...</p>
+                        </div>
+
+                        <div class="card-actions">
+                            <button class="action-button edit-product"><img src="./../img/edit-icon.png" alt="Edit Icon"></button>
+                            <button class="action-button delete-product"><img src="./../img/delete-icon.png" alt="Trash Icon"></button>
+                        </div>
                     </li>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
-                    </li>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
-                    </li>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
-                    </li>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
-                    </li>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
-                    </li>
+                    
                 </ul>
 
+            </section>
+
+            <!-- MODAL LOGOUT -->
+            <div class="profile-option hidden">
+                <div class="section-header">
+                    <h5 class="name-modal">Usuario</h5>
+                </div>
+                <div class="buttons-option">
+                    <button id="logout" class="gray">Logout</button>
+                </div>
             </div>
 
-            <!-- <div>
-                <form class="productRegister">
-                    <h5 class="nameModal">Cadastro de Produto</h5>
-                    <button class="closeModal">X</button>
-                    <label for="productName">Nome do Produto</label>
-                    <input type="text" class="productName" name="productName">
-                    <label for="descriptionProd">Descrição</label>
-                    <input type="text" class="descriptionProd" name="descriptionProd">
-                    <span>Categoria</span>
-                    <input type="checkbox" name="categoryProd" class="btnForm">
-                    <label for="categoryProd">Panificadora</label>
-                    <input type="checkbox" name="categoryProd" class="btnForm">
-                    <label for="categoryProd">Frutas</label>
-                    <input type="checkbox" name="categoryProd" class="btnForm">
-                    <label for="categoryProd">Bebidas</label>
-                    <label for="productValue">Valor do Produto</label>
-                    <input type="text" class="productValue" name="productValue">
-                    <label for="imageLink">Link da imagem</label>
-                    <input type="text" class="imageLink" name="imageLink">
-                    <button class="btnRegister">Cadastrar Produto</button>
-                </form>
-
-                <form class="productEdit">
-                    <h5 class="nameModal">Edição de Produto</h5>
-                    <button class="closeModal">X</button>
-                    <label for="productName">Nome do Produto</label>
-                    <input type="text" class="productName" name="productName">
-                    <label for="descriptionProd">Descrição</label>
-                    <input type="text" class="descriptionProd" name="descriptionProd">
-                    <span>Categoria</span>
-                    <input type="checkbox" name="categoryProd" class="btnForm">
-                    <label for="categoryProd">Panificadora</label>
-                    <input type="checkbox" name="categoryProd" class="btnForm">
-                    <label for="categoryProd">Frutas</label>
-                    <input type="checkbox" name="categoryProd" class="btnForm">
-                    <label for="categoryProd">Bebidas</label>
-                    <label for="productValue">Valor do Produto</label>
-                    <input type="text" class="productValue" name="productValue">
-                    <label for="imageLink">Link da imagem</label>
-                    <input type="text" class="imageLink" name="imageLink">
-                    <button class="btnDelete">Excluir</button>
-                    <button class="btnSave">Salvar Alterações</button>
-                </form>
-
-                <form>
-                    <h5 class="nameModal">Exclusão de Produto</h5>
-                    <button class="closeModal">X</button>
-                    <span >Tem certeza que deseja excluir este produto?</span>
-                    <input type="checkbox" name="deleteProd" class="btnForm">
-                    <label for="deleteProd">Sim</label>
-                    <input type="checkbox" name="noDelete" class="btnForm">
-                    <label for="noDelete">Não</label>
-
-                </form>
-
-                <section class="statusSection">
-                    <h5 class="nameModal">Status</h5>
-                    <button class="closeModal">X</button>
-                    <span class="modalStatus">Produto adicionado com sucesso</span>
+            <!-- MODAL CADASTRAR PRODUTO -->
+            <div class="modal hidden">
+                <section class="modal-section">
+                    <div class="section-header">
+                        <h5 class="name-modal">Cadastro de Produto</h5>
+                        <button class="close-modal">X</button>
+                    </div>
+                    
+                    <form class="product-register">
+                        <label for="productName">Nome do Produto</label>
+                        <input type="text" class="productName" name="productName" placeholder="Digitar o nome do produto">
+                        <label for="descriptionProd">Descrição</label>
+                        <input type="text" class="descriptionProd" name="descriptionProd" placeholder="Digitar a descrição do produto">
+                        <span>Categoria</span>
+                        <div class="category-options">
+                            <input type="checkbox" name="panificadora" value="panificadora" class="btnForm">
+                            <label for="panificadora">Panificadora</label>
+                            <input type="checkbox" name="frutas" value="frutas" class="btnForm">
+                            <label for="frutas">Frutas</label>
+                            <input type="checkbox" name="bebidas" value="bebidas" class="btnForm">
+                            <label for="bebidas">Bebidas</label>
+                        </div>
+                        <label for="productValue">Valor do Produto</label>
+                        <input type="text" class="productValue" name="productValue" placeholder="Digitar o valor do produto">
+                        <label for="imageLink">Link da imagem</label>
+                        <input type="text" class="imageLink" name="imageLink" placeholder="Insira o link da imagem">
+                        <div class="buttons-option">
+                          <button id="btn-register" class="pink">Cadastrar Produto</button>
+                        </div>
+                    </form>
                 </section>
-            </div> -->
-            
+            </div>
+
+            <!-- MODAL EDITAR PRODUTO -->
+            <div class="modal hidden">
+                <section class="modal-section">
+                    <div class="section-header">
+                        <h5 class="name-modal">Edição de Produto</h5>
+                        <button class="close-modal">X</button>
+                    </div>
+                    
+                    <form class="product-edit">
+                        <label for="productName">Nome do Produto</label>
+                        <input type="text" class="productName" name="productName" placeholder="Digitar o nome do produto">
+                        <label for="descriptionProd">Descrição</label>
+                        <input type="text" class="descriptionProd" name="descriptionProd" placeholder="Digitar a descrição do produto">
+                        <span>Categoria</span>
+                        <div class="category-options">
+                            <input type="checkbox" name="panificadora" value="panificadora" class="btnForm">
+                            <label for="panificadora">Panificadora</label>
+                            <input type="checkbox" name="frutas" value="frutas" class="btnForm">
+                            <label for="frutas">Frutas</label>
+                            <input type="checkbox" name="bebidas" value="bebidas" class="btnForm">
+                            <label for="bebidas">Bebidas</label>
+                        </div>
+                        <label for="productValue">Valor do Produto</label>
+                        <input type="text" class="productValue" name="productValue" placeholder="Digitar o valor do produto">
+                        <label for="imageLink">Link da imagem</label>
+                        <input type="text" class="imageLink" name="imageLink" placeholder="Insira o link da imagem">
+                       <div class="buttons-option">
+                           <button id="btn-cancel-edit" class="gray">Excluir</button>
+                           <button id="btn-save-edit" class="pink">Salvar alterações</button>
+                       </div>
+                    </form>
+                </section>
+            </div>
+
+            <!-- MODAL EXCLUIR PRODUTO -->
+            <div class="modal hidden">
+                <section class="modal-section">
+                    <div class="section-header">
+                        <h5 class="name-modal">Exclusão de produto</h5>
+                        <button class="close-modal">X</button>
+                    </div>
+                    <p>Tem certeza que deseja excluir?</p>
+                    <div class="buttons-option">
+                        <button id="btn-yes" class="gray">Sim</button>
+                        <button id="btn-no" class="gray">Não</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- MODAL STATUS OK -->
+            <div class="modal-status ok hidden">
+                    <div class="section-header">
+                        <h5 class="name-modal">Status</h5>
+                        <button class="close-modal">X</button>
+                    </div>
+                    <p class="mesage">Produto adicionado com sucesso</p>
+            </div>
+
+            <!-- MODAL STATUS NOT OK -->
+            <div class="modal-status not-ok hidden">
+                <div class="section-header">
+                    <h5 class="name-modal">Status</h5>
+                    <button class="close-modal">X</button>
+                </div>
+                <p class="mesage">Ocorreu algum erro, o produto não foi adicionado</p>
         </div>
+            
 </body>
 </html>
