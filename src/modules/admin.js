@@ -3,7 +3,7 @@ import { Modal } from "./modalAdmin.js";
 
 export class Vitrine {
     
-    static vitrine = document.querySelector('.dashboard-list');
+    static vitrine = document.querySelector('.content');
     static vitrineMaker ({nome, imagem, categoria, descricao}){
 
         const li        = document.createElement('li');
@@ -30,12 +30,13 @@ export class Vitrine {
         divBtn.classList.add('card-buttons');
         btnEdit.classList.add("edit-product");
         btnDlt.classList.add('delete-product');
-        imgBtnE.setAttribute('alt','img');
+        imgBtnE.setAttribute('alt','');
         imgBtnE.setAttribute('src','img');
-        imgBtnD.setAttribute('alt','img');
+        imgBtnD.setAttribute('alt','');
         imgBtnD.setAttribute('src','img');
 
-
+        btnEdit.innerText = 'Edit';
+        btnDlt.innerText = 'Delet';
         textProd.innerText = nome;
         spanCat.innerText = categoria;
         pDesc.innerText = descricao;
@@ -63,6 +64,30 @@ export class Vitrine {
             Vitrine.vitrineMaker(e);
         });
     }
+
+    static async rgtProduct(event){
+        const btn = event.target;
+        if(btn.className === 'adc-product'){
+            Modal.formRegister();
+
+        }
+        // const newProduct = await Api.createProduct();
+    }
+
+    static async edtProduct(event){
+        const btn = event.target;
+        if(btn.className === "edit-product"){
+            Modal.formEdit();
+        }
+    }
+
+    static async dltProduct(event){
+        const btn = event.target;
+        if(btn.className === 'delete-product'){
+            Modal.formDelete();
+        }
+    }
+
 
    
 }

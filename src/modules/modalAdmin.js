@@ -10,15 +10,17 @@ export class Modal {
         const inputName    = document.createElement('input');
         const labelDescrip = document.createElement('label');
         const inputDescrip = document.createElement('input');
+        const divCatg       = document.createElement('div');
         for(let i =0; i<Modal.arrCateg.length;i++){
-            let labelCateg = document.createElement('label');
-            let inputCateg = document.createElement('input');
+            const labelCateg = document.createElement('label');
+            const inputCateg = document.createElement('input');
             inputCateg.classList.add('btnForm');
             inputCateg.setAttribute("type", "checkbox");
-            labelCateg.classList.add('categoryProd');
+            labelCateg.setAttribute('for','btnForm');
             labelCateg.innerText = Modal.arrCateg[i];
-            form.appendChild(inputCateg);
-            form.appendChild(labelCateg);
+
+            divCatg.appendChild(inputCateg);
+            divCatg.appendChild(labelCateg);
         }
         const labelValue   = document.createElement('label');
         const inputValue   = document.createElement('input');
@@ -39,11 +41,11 @@ export class Modal {
         labelDescrip.innerText = 'Descrição';
         labelValue.innerText = 'Valor do Produto';
         labelImage.innerText = 'Link da Imagem';
-
         form.appendChild(labelName);
         form.appendChild(inputName);
         form.appendChild(labelDescrip);
         form.appendChild(inputDescrip);
+        form.appendChild(divCatg);
         form.appendChild(labelValue);
         form.appendChild(inputValue);
         form.appendChild(labelImage);
@@ -82,8 +84,7 @@ export class Modal {
         h5.classList.add('nameModal');
         const btnClose = document.createElement('button');
         btnClose.classList.add('closeModal');
-
-        Modal.formBasic();
+        Modal.formBasic(form);
 
         const btnDelete = document.createElement('button'); 
         const btnSave   = document.createElement('button');
