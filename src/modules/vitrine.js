@@ -13,7 +13,9 @@ class Vitrine {
         <div class="vitrine-card">
         <img class="vitrine-img" src="${imagem}">
         <h3>${nome}</h3>
-        <p>${descricao}</p>
+        <div class="card-descricao">
+          <p>${descricao}</p>
+        </div>
         <span>${categoria}</span>
         <div class="vitrine-buy">
         <h5>R$${preco.replace('.',',')}</h5>

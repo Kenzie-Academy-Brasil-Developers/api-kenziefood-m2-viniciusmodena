@@ -16,11 +16,12 @@
     <header>
         <div class="header-imgs">
             <img class="header-img" src="./src/img/logo.png">
-            <img class="header-icon--mobile" src="./src/img/userIcon.png" alt="user login">
+            <img class="header-icon--mobile hidden" src="./src/img/userIcon.png" alt="user login">
         </div>
         <div class="header-rightside">
             <input class="header-input" type="text" placeholder="Pesquisar por produto">
-            <img class="header-icon--desktop" src="./src/img/userIcon.png" alt="user login">
+            <img  class="header-icon" src="./src/img/userIcon.png" alt="user login">
+            <p class="login">Sign in</p>
         </div>
     </header>
 
@@ -61,21 +62,22 @@
             </ul>
         </div>
 
-        <div class="cart-full">
-
-            <div class="cart-title">
-                <i class="fa-solid fa-cart-arrow-down"></i>
-                <h5>Carrinho</h5>
+        <!-- <div class="containerModal"> -->
+            <div class="cart-full">
+                
+                <div class="cart-title">
+                    <i class="fa-solid fa-cart-arrow-down"></i>
+                    <h5>Carrinho</h5>
+                </div>
+                
+                <div class="cart-full--cards">
+                    
+                </div>
+                
+                <div class="cart-full--amount"><h5>Quantidade</h5><h5 id="total-items"></h5></div>
+                <div class="cart-full--total"><h5>Total</h5><h5 id="total-cart"></h5></div>
             </div>
-
-            <div class="cart-full--cards">
-                        
-            </div>
-
-            <div class="cart-full--amount"><h5>Quantidade</h5><h5 id="total-items"></h5></div>
-            <div class="cart-full--total"><h5>Total</h5><h5 id="total-cart"></h5></div>
-
-        </div>
+        <!-- </div> -->
 
     </main>
 

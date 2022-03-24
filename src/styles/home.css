@@ -21,6 +21,14 @@ header {
     background: #FFFFFF;
 }
 
+header p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    color: #868E96;
+    cursor: pointer;
+}
+
 .header-imgs {
     display: flex;
     justify-content: space-between;
@@ -59,16 +67,26 @@ header {
     color: #868E96;
 }
 
+.header-rightside {
+    position: relative;
+}
+
 .header-icon {
+    position: absolute;
     width: 36px;
     height: 36px;
 
     background: #C4C4C4;
     border-radius: 128.571px;
+
+    top: -25px;
+    right: 20px;
 }
 
-.header-icon--desktop {
-    display: none;
+.header-rightside .login {
+    position: absolute;
+    top: -25px;
+    right: 20px;
 }
 
 /*
@@ -91,6 +109,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+    cursor: pointer;
 }
 
 .filters-todos {
@@ -196,6 +215,7 @@ VITRINE
     color: #0CA678;
 }
 
+
 .vitrine-img {
     height: 200px;
     width: 300px;
@@ -220,7 +240,13 @@ VITRINE
     border-radius: 50%;
     height: 38px;
     width: 38px;
+    cursor: pointer;
 }
+
+.vitrine-buy button:hover {
+    background: #66caac;
+}
+
 
 .vitrine h3 {
     font-family: 'Poppins';
@@ -261,15 +287,28 @@ VITRINE
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 16px;
 
+    margin: 10px 0 15px;
     color: #868E96;
+}
+
+.vitrine .card-descricao {
+    height: 50px;
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
+    /* display: inline-block; */
+    overflow: hidden;
 }
 
 /*
 CARRINHO
 */
+
+.cart-full{
+    display: none;
+}
 
 .cart {
     display: none;
@@ -302,13 +341,13 @@ CARRINHO
     color: white;
 }
 
-@media (min-height: 700px) {
+/* @media (min-height: 700px) {
     .vitrine {
         margin: 20px 0px 0px;
     }
-}
+} */
 
-@media (min-width: 450px) {
+@media (min-width: 1150px) {
 
     header {
         position: absolute;
@@ -367,15 +406,22 @@ CARRINHO
         margin-right: 118px;
     }
 
-    .header-icon--mobile {
-        display: none;
-    }
 
-    .header-icon--desktop {
-        display: block;
+    .header-icon {
         height: 36px;
         width: auto;
         cursor: pointer;
+        
+        position: absolute;
+        right: -40px;
+        top: 7px;
+    }
+
+    .header-rightside .login {
+        position: absolute;
+        right: -40px;
+        top: 15px;
+
     }
 
     .header-login {
@@ -525,7 +571,7 @@ CARRINHO
 CARRINHO FULL
 */
 .cart-full {
-    /* display: none; */
+    display: block;
 }
 
 .cart-full--cards {
@@ -633,6 +679,11 @@ CARRINHO FULL
     border: none;
     background: #F8F9FA;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-full--trash:hover {
+    background: #915c5c;
 }
 
 .cart-full--amount {

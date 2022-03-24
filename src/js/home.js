@@ -10,11 +10,11 @@ const user = {
   password: 'equipe1'
 }
 
-const novotoken = await Api.userLogin(user)
+// const novotoken = await Api.userLogin(user)
 
-const stringnovotoken = JSON.stringify(novotoken)
+// const stringnovotoken = JSON.stringify(novotoken)
 
-localStorage.setItem('token', stringnovotoken)
+// localStorage.setItem('token', stringnovotoken)
 
 // localStorage.removeItem('token')
 
@@ -26,13 +26,11 @@ const cartItems = document.querySelector(".cart-full--cards");
 
 const filterButtons = document.querySelector(".filters")
 const searchInput = document.querySelector(".header-input")
+const signIn = document.querySelector('.login')
+const signOut = document.querySelector('.header-icon')
+const cartMobileBtn = document.querySelector('.cart--mobile')
+
 const publicProducts = await Api.getProducts()
-
-
-// const myproductstest = await Api.getMyProducts(novotoken)
-//  myproductstest.forEach( async ({id}) => {
-//   await Api.deleteProduct(id, novotoken)
-// })
 
 class Load {
 
@@ -54,8 +52,10 @@ class Load {
       Vitrine.createCards(allProducts, vitrine);
 
       const cartProducts = JSON.parse(localStorage.getItem('cart'))
-      Carrinho.createCardsCarrinho(cartProducts, cartItems)
-      this.updateTotal(cartProducts)
+      if (cartProducts) {
+        Carrinho.createCardsCarrinho(cartProducts, cartItems)
+        this.updateTotal(cartProducts)
+      }
     }
   }
 
@@ -75,8 +75,8 @@ class Load {
     const priceLocation = document.getElementById('total-cart')
     const amountLocation = document.getElementById('total-items')
 
-    let {totalItems, totalPrice} = totalObj
-    
+    let { totalItems, totalPrice } = totalObj
+
     totalPrice = totalPrice.toFixed(2)
 
     amountLocation.innerText = totalItems
@@ -86,7 +86,7 @@ class Load {
   static async storageToApiCart() {
 
     const token = JSON.parse(localStorage.getItem('token'))
-    
+
     let localCart = JSON.parse(localStorage.getItem('cart'))
     const myProducts = await Api.getMyProducts(token)
 
@@ -117,22 +117,20 @@ class Load {
     }
   }
 }
-// Load.cart()
-
-// window.localStorage.removeItem('cart');
 
 const token = JSON.parse(localStorage.getItem('token'))
 
+signOut.classList.add('hidden')
+
+
 if (token) {
   Load.storageToApiCart()
-  const test = await Api.getCart(token)
-  console.log(test)
+  signOut.classList.remove('hidden')
+  signIn.classList.add('hidden')
 }
 
-
 Load.page()
-setTimeout(Load.cart, 350)
-
+setTimeout(Load.cart, 450)
 
 vitrine.addEventListener("click", async (evt) => {
   if (evt.target.tagName === "BUTTON" || evt.target.tagName === "I") {
@@ -175,7 +173,7 @@ vitrine.addEventListener("click", async (evt) => {
       await Api.addProductToCart(productId, token);
 
       const products = await Api.getCart(token);
-      
+
       Load.updateTotal(products)
 
       Carrinho.createCardsCarrinho(products, cartItems);
@@ -186,12 +184,8 @@ vitrine.addEventListener("click", async (evt) => {
   }
 });
 
-
-
 cartItems.addEventListener("click", async (evt) => {
   if (evt.target.tagName === "BUTTON" || evt.target.tagName === "I") {
-
-    console.log('hi')
 
     const token = JSON.parse(localStorage.getItem('token'))
     const cardProductId = evt.target.id;
@@ -199,7 +193,7 @@ cartItems.addEventListener("click", async (evt) => {
     if (token) {
 
       await Api.deleteProductFromCart(cardProductId, token);
-      const cartApi = await Api.getCart(token) 
+      const cartApi = await Api.getCart(token)
 
       Load.updateTotal(cartApi)
 
@@ -208,16 +202,9 @@ cartItems.addEventListener("click", async (evt) => {
 
       const localCart = JSON.parse(localStorage.getItem('cart'))
 
-      console.log(localCart)
-
       const localCartUpdated = localCart.filter(({ products: { id } }) => {
-        console.log(id)
-        console.log(cardProductId)
         return id != cardProductId
       })
-
-      console.log(localCartUpdated)
-
 
       const stringLocalCart = JSON.stringify(localCartUpdated)
       localStorage.setItem('cart', stringLocalCart)
@@ -233,37 +220,36 @@ cartItems.addEventListener("click", async (evt) => {
   }
 })
 
-
 filterButtons.addEventListener("click", async (evt) => {
 
   const token = JSON.parse(localStorage.getItem('token'))
 
   let arrayProdutos
 
-  if(token) {
+  if (token) {
     arrayProdutos = await Api.getMyProducts(token)
   } else {
     arrayProdutos = await Api.getProducts()
   }
 
 
-  if (evt.target.id == "todos" || evt.target.parentElement.id == "todos"){
+  if (evt.target.id == "todos" || evt.target.parentElement.id == "todos") {
     Vitrine.createCards(arrayProdutos, vitrine)
   }
 
-  if (evt.target.id == "panificadora" || evt.target.parentElement.id == "panificadora"){
+  if (evt.target.id == "panificadora" || evt.target.parentElement.id == "panificadora") {
     const arrayfiltradateste = Vitrine.filter(arrayProdutos, "panificadora")
 
     Vitrine.createCards(arrayfiltradateste, vitrine)
   }
 
-  if (evt.target.id == "frutas" || evt.target.parentElement.id == "frutas"){
+  if (evt.target.id == "frutas" || evt.target.parentElement.id == "frutas") {
     const arrayfiltradateste = Vitrine.filter(arrayProdutos, "frutas")
 
     Vitrine.createCards(arrayfiltradateste, vitrine)
   }
 
-  if (evt.target.id == "bebidas" || evt.target.parentElement.id == "bebidas"){
+  if (evt.target.id == "bebidas" || evt.target.parentElement.id == "bebidas") {
     const arrayfiltradateste = Vitrine.filter(arrayProdutos, "bebidas")
 
     Vitrine.createCards(arrayfiltradateste, vitrine)
@@ -277,7 +263,7 @@ searchInput.addEventListener("input", async () => {
 
   let arrayProdutos
 
-  if(token) {
+  if (token) {
     arrayProdutos = await Api.getMyProducts(token)
   } else {
     arrayProdutos = await Api.getProducts()
@@ -286,5 +272,23 @@ searchInput.addEventListener("input", async () => {
   const found = Vitrine.search(arrayProdutos, searchInput.value)
 
   Vitrine.createCards(found, vitrine)
+
+})
+
+signIn.addEventListener('click', () => {
+  window.location.href = "./../pages/login.html";
+})
+
+signOut.addEventListener('click', () => {
+
+  window.localStorage.removeItem('cart');
+  window.localStorage.removeItem('token');
+
+  window.location.href = "./index.html";
+
+  console.log('hi')
+})
+
+cartMobileBtn.addEventListener('click', () => {
   
 })
