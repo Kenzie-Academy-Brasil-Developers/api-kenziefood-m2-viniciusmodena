@@ -37,66 +37,37 @@
                 </button>
             </div>
 
-            <div class="vitrine">
-                <ul>
-                    <span>Produto</span> <span>Categoria</span> <span>Descrição</span> <span>Ações</span>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
+            <section class="dashboard-section">
+                <div class="dashboard-header">
+                    <span class="card-header-product">Produto</span>
+                    <span class="card-header-category">Categoria</span>
+                    <span class="card-header-description">Descrição</span>
+                    <span class="card-header-actions">Ações</span>
+                </div>
+                <ul class="dashboard-list">
+                   
+                    <li class="card-dashboard">
+                        <div class="card-product">
+                            <img src="./../img/pancake.png" alt="panqueca de banana">
+                            <p class="card-name">Panqueca de banana com aveia</p>
+                        </div>
+                        <div class="card-categories">
+                            <span>Frutas</span>
+                            <span>Doce</span>
+                            <span>Bebida</span>
+                        </div>
+                        <div class="card-description">
+                            <p>Esta receita serve muito bem 2 pessoas...</p>
+                        </div>
+                        <div class="card-buttons">
+                            <button class="action-button edit-product"><img src="" alt=""></button>
+                            <button class="action-button delete-product">D</button>
+                        </div>
                     </li>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
-                    </li>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
-                    </li>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
-                    </li>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
-                    </li>
-                    <li>
-                        <img src="../img/pancake.png" alt="panqueca de banana">
-                        <p>Panqueca de banana com aveia</p>
-                        <p>frutas</p>
-                        <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                           se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                           <button class="edit-product"></button>
-                           <button class="delete-product"></button>
-                    </li>
+                    
                 </ul>
 
-            </div>
+            </section>
 
             <div class="modal">
                 <!--  
@@ -124,7 +95,7 @@
                 <form class="productEdit">
                     <h5 class="nameModal">Edição de Produto</h5>
                     <button class="closeModal">X</button>
-                    
+
                     <label for="productName">Nome do Produto</label>
                     <input type="text" class="productName" name="productName">
                     <label for="descriptionProd">Descrição</label>
@@ -164,5 +135,7 @@
             </div>
             
         </div>
+    </main>
+    <script type="module" src="../modules/scriptAdmin.js"></script>
 </body>
 </html>
