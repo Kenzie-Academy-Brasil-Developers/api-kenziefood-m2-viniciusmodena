@@ -17,29 +17,21 @@ header {
 
     width: 100%;
     height: 72px;
-    left: 0px;
-    top: 0px;
 
     background: #FFFFFF;
-    box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
 }
 
 .header-imgs {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-}
-
-.header-icon--mobile {
-    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 15px 18px 0;
 }
 
 .header-img {
-    padding: 10px 0px 0px 10px;
     width: 122px;
     height: 33px;
-    left: 18px;
-    top: 21px;
 }
 
 .header-input {
@@ -48,16 +40,12 @@ header {
     align-items: center;
     padding: 15px 18px 15px 16px;
 
-    margin-top: 50px;
-    margin-left: 10px;
+    margin: 36px auto 0;
 
     width: 342px;
     height: 49px;
-    left: 18px;
-    top: 90px;
 
     background: #E9ECEF;
-
     border: 1.5px solid #E9ECEF;
     box-sizing: border-box;
     border-radius: 12px;
@@ -74,8 +62,6 @@ header {
 .header-icon {
     width: 36px;
     height: 36px;
-    left: 1446px;
-    top: 17px;
 
     background: #C4C4C4;
     border-radius: 128.571px;
@@ -96,26 +82,28 @@ main {
 .filters {
     display: flex;
     flex-direction: row;
+    margin-left: 18px;
+}
+
+.filters-todos, .filters-panificadora, .filters-frutas, .filters-bebidas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
 
 .filters-todos {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 15px 20px;
-
     width: 88px;
     height: 48px;
-    left: 117px;
-    top: 122px;
 
     background: #FF2253;
 
     border: 1.5px solid #FF2253;
     box-sizing: border-box;
     border-radius: 32px;
-    margin: 0px 22px;
+    margin: 0px 11px;
 }
 
 .filters-todos h5 {
@@ -123,12 +111,6 @@ main {
 }
 
 .filters-panificadora {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-
     width: 170px;
     height: 48px;
     left: 110px;
@@ -142,16 +124,10 @@ main {
 
     flex: none;
     flex-grow: 0;
-    margin: 0px 22px;
+    margin: 0px 11px;
 }
 
 .filters-frutas {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-
     width: 123px;
     height: 48px;
     left: 302px;
@@ -162,18 +138,12 @@ main {
     border: 1.5px solid #FFF1F4;
     box-sizing: border-box;
     border-radius: 32px;
-    margin: 0px 22px;
+    margin: 0px 11px;
     flex: none;
     flex-grow: 0;
 }
 
 .filters-bebidas {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-
     width: 136px;
     height: 48px;
     left: 582px;
@@ -184,23 +154,17 @@ main {
     border: 1.5px solid #F3EEF5;
     box-sizing: border-box;
     border-radius: 32px;
-    margin: 0px 22px;
+    margin: 0px 11px;
     flex: none;
     flex-grow: 0;
 }
 
 button h5 {
-    left: 0%;
-    right: 80.2%;
-    top: 84.39%;
-    bottom: 4.05%;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-
 
     color: #212529;
 }
@@ -214,20 +178,18 @@ VITRINE
     flex-direction: row;
     flex-wrap: nowrap;
 
-    margin-top: 20px;
+    margin: 20px 0 58px;
     padding: 0px 0px 0px 18px;
 }
 
 .vitrine-card {
     display: flex;
     flex-direction: column;
+   
     padding: 0px;
     width: 303px;
     height: 397px;
-    left: 18px;
-    top: 250px;
-
-    margin-bottom: 30px;
+    margin: 0 10px 30px;
 }
 
 .vitrine-card i {
@@ -237,11 +199,6 @@ VITRINE
 .vitrine-img {
     height: 200px;
     width: 300px;
-
-    left: 0%;
-    right: 0.99%;
-    top: 0%;
-    bottom: 49.62%;
 
     border: none;
     box-sizing: border-box;
@@ -254,11 +211,6 @@ VITRINE
     align-items: center;
 
     width: 100%;
-    left: 0%;
-    right: 0%;
-    top: 78.03%;
-    bottom: 0%;
-
     flex-grow: 0;
 }
 
@@ -268,16 +220,9 @@ VITRINE
     border-radius: 50%;
     height: 38px;
     width: 38px;
-    left: 0px;
-    top: 0px;
 }
 
 .vitrine h3 {
-    left: 0%;
-    right: 12.21%;
-    top: 0%;
-    bottom: 84.39%;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -293,11 +238,6 @@ VITRINE
 }
 
 .vitrine h5 {
-    left: 0%;
-    right: 80.2%;
-    top: 84.39%;
-    bottom: 4.05%;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -308,11 +248,6 @@ VITRINE
 }
 
 .vitrine p {
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: -118.18%;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -320,20 +255,9 @@ VITRINE
     line-height: 24px;
 
     color: #868E96;
-
 }
 
-/* .card-text {
-    height: 200px;
-    overflow-y: hidden;
-} */
-
 .vitrine span {
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: -118.18%;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -347,11 +271,11 @@ VITRINE
 CARRINHO
 */
 
-.card {
-    /* display: none; */
+.cart {
+    display: none;
 }
 
-.card-title {
+.cart-title {
     width: 374px;
     height: 60px;
     left: 0px;
@@ -361,8 +285,9 @@ CARRINHO
     border-radius: 0px;
 }
 
-.card-footer {
-    /* position: absolute; */
+.cart--mobile {
+    position: absolute;
+    z-index: 1;
     bottom: 0;
     width: 100%;
     height: 60px;
@@ -370,15 +295,26 @@ CARRINHO
     background: #FF2253;
     border-radius: 0px;
     border: none;
+
 }
 
-.card-footer i, .card-footer h5 {
+.cart--mobile i, .cart--mobile h5 {
     color: white;
 }
 
+@media (min-height: 700px) {
+    .vitrine {
+        margin: 20px 0px 0px;
+    }
+}
 
 @media (min-width: 450px) {
+
     header {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -393,6 +329,10 @@ CARRINHO
         box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
     }
 
+    .header-imgs {
+        padding: 0;
+    }
+
     .header-img {
         margin-left: 190px;
     }
@@ -402,7 +342,7 @@ CARRINHO
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        /* padding: 15px 18px 15px 16px; */
+        padding: 15px 18px 15px 16px;
 
         width: 312px;
         height: 49px;
@@ -455,6 +395,10 @@ CARRINHO
 
     }
 
+    .filters-todos, .filters-panificadora, .filters-frutas, .filters-bebidas {
+        margin: 0 14px;
+    }
+
     .filters-todos:hover {
         border: solid 1px black;
     }
@@ -477,6 +421,7 @@ CARRINHO
 
     main {
         display: flex;
+        margin-top: 122px;
     }
 
     .content {
@@ -495,24 +440,23 @@ CARRINHO
 
     .vitrine-card {
         padding: 10px;
+        margin: 0 0 30px;
     }
 
     /*
-    card
+    cart
     */
 
-    .card {
-        /* display: none; */
-        /* display: flex; */
+    .cart {
+        display: block;
         flex-direction: column;
+        display: none;
 
         width: 320px;
         height: 352px;
-        left: 1166px;
-        top: 122px;
     }
 
-    .card-title {
+    .cart-title {
         display: flex;
         align-items: center;
 
@@ -533,15 +477,15 @@ CARRINHO
         color: #FFFFFF;
     }
 
-    .card-title i {
+    .cart-title i {
         margin-left: 30px;
     }
 
-    .card-title h5 {
+    .cart-title h5 {
         margin-left: 20px;
     }
 
-    .card-ul {
+    .cart-message {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -556,11 +500,11 @@ CARRINHO
         border-radius: 0px 0px 12px 12px;
     }
 
-    .card-ul i {
+    .cart-message i {
         color: #868E96;
     }
 
-    .card-ul p {
+    .cart-message p {
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
@@ -572,7 +516,7 @@ CARRINHO
         color: #868E96;
     }
 
-    .card-footer {
+    .cart--mobile {
         display: none;
     }
 
@@ -581,49 +525,50 @@ CARRINHO
 /* 
 CARRINHO FULL
 */
-#card-full {
+.cart-full {
     display: none;
 }
 
-.card-full--ul {
+.cart-full--cards {
     height: 200px;
     overflow-y: auto;
 }
 
-.card-full--li {
+.cart-full--cards::-webkit-scrollbar {
+    display: none;
+}
+
+
+.cart-full--card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 319px;
     height: 84px;
-    left: 9.5px;
-    top: 386px;
 
     background-color: white;
 }
 
-.card-full-img {
+.cart-full-img {
     width: 70px;
     height: 70px;
-    left: 0px;
-    top: 0px;
 
     border-radius: 8px;
 }
 
-.card-full--divimg {
+.cart-full--divimg {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.card-full--divinfo {
+.cart-full--divinfo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.card-full--divinfo h3 {
+.cart-full--divinfo h3 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -633,7 +578,7 @@ CARRINHO FULL
     color: #000000;
 }
 
-.card-full--divinfo span {
+.cart-full--divinfo span {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 200;
@@ -643,7 +588,7 @@ CARRINHO FULL
     color: #868E96;
 }
 
-.card-full--divinfo h5, .card-full--amount h5, .card-full--total h5 {
+.cart-full--divinfo h5, .cart-full--amount h5, .cart-full--total h5 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -654,45 +599,39 @@ CARRINHO FULL
     color: #212529;
 }
 
-.card-full--divtrash {
+.cart-full--divtrash {
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 
-.card-full--trash {
+.cart-full--trash {
     width: 25px;
     height: 25px;
-    left: 275px;
-    top: 0px;
 
     border: none;
     background: #F8F9FA;
     border-radius: 4px;
 }
 
-.card-full--amount {
+.cart-full--amount {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     width: 319px;
     height: 58px;
-    left: 1165px;
-    top: 589px;
 
     background: #F8F9FA;
 }
 
-.card-full--total {
+.cart-full--total {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     width: 319px;
     height: 58px;
-    left: 1165px;
-    top: 589px;
 
     background: white;
 }
