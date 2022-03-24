@@ -13,7 +13,7 @@ class Api {
             .then(response => {
                 console.log(response)
                 return response
-            })
+            }) 
             .catch(err => console.error(err))
         
         return response

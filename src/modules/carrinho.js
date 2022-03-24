@@ -5,7 +5,7 @@
         location.innerHTML = ''
         
         
-        products.forEach( ({quantity, products:{categoria, descricao, id, imagem, nome, preco}}  ) => {
+        products.forEach( ({quantity, products:{categoria, id, imagem, nome, preco}}  ) => {
 
             preco = preco.toFixed(2)
             // {preco.replace('.',',')}
