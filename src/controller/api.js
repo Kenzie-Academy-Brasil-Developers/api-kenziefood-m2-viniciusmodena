@@ -134,7 +134,6 @@ class Api {
             "body": JSON.stringify(productInfo)
         })
             .then(response => {
-                console.log(response)
                 return response
             })
             .catch(err => console.error(err))

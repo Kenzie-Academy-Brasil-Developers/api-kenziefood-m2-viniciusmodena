@@ -1,6 +1,9 @@
 class Vitrine {
   
   static createCards(products, location) {
+
+    location.innerHTML = ''
+
     products.forEach( ({categoria, descricao, id, imagem, nome, preco}) => {
 
       preco = preco.toFixed(2)
@@ -20,6 +23,22 @@ class Vitrine {
 
       location.appendChild(cardProduto);
     });
+  }
+
+  static filter(products, category) {
+    const filtrados =  products.filter( ({ categoria }) => {
+
+      return categoria.toLowerCase() == category.toLowerCase()
+    })
+    
+    return filtrados
+  }
+
+  static search(products, text) {
+    const found = products.filter( ({nome}) => {
+      return nome.toLowerCase().includes(text.toLowerCase())
+    })
+    return found
   }
 }
 

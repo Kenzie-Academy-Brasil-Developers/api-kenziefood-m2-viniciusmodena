@@ -450,7 +450,6 @@ CARRINHO
     .cart {
         display: block;
         flex-direction: column;
-        display: none;
 
         width: 320px;
         height: 352px;
@@ -526,11 +525,11 @@ CARRINHO
 CARRINHO FULL
 */
 .cart-full {
-    
+    /* display: none; */
 }
 
 .cart-full--cards {
-    height: 200px;
+    height: 400px;
     overflow-y: auto;
 }
 
@@ -545,7 +544,7 @@ CARRINHO FULL
     justify-content: space-between;
     width: 319px;
     height: 84px;
-
+    margin: 23px 0 36px;
     background-color: white;
 }
 
@@ -566,16 +565,22 @@ CARRINHO FULL
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 176px;
+    margin-top: 10px;
 }
 
 .cart-full--divinfo h3 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 27px;
+    font-size: 14px;
+    line-height: 20px;
 
     color: #000000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .cart-full--divinfo span {
@@ -588,6 +593,8 @@ CARRINHO FULL
     color: #868E96;
 }
 
+
+
 .cart-full--divinfo h5, .cart-full--amount h5, .cart-full--total h5 {
     font-family: 'Poppins';
     font-style: normal;
@@ -599,10 +606,24 @@ CARRINHO FULL
     color: #212529;
 }
 
+.cart-full--divinfo h5 {
+    padding: 0px;
+}
+
 .cart-full--divtrash {
+    position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    margin: 10px 9px 0;
+}
+
+.cart-full--divtrash p{
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    z-index: 1;
+    width: 30px;
 }
 
 .cart-full--trash {
@@ -634,4 +655,8 @@ CARRINHO FULL
     height: 58px;
 
     background: white;
+}
+
+.hidden {
+    display: none;
 }
