@@ -16,11 +16,11 @@
     <header>
         <div class="header-imgs">
             <img class="header-img" src="./src/img/logo.png">
-            <img class="header-icon--mobile" src="./src/img/userIcon.png" alt="user login">
         </div>
         <div class="header-rightside">
             <input class="header-input" type="text" placeholder="Pesquisar por produto">
-            <img class="header-icon--desktop" src="./src/img/userIcon.png" alt="user login">
+            <img  class="header-icon" src="./src/img/userIcon.png" alt="user login">
+            <p class="login">Sign in</p>
         </div>
     </header>
 
@@ -28,98 +28,24 @@
         <div class="content">
 
             <div class="filters">
-                <button class="filters-todos">
+                <button id="todos" class="filters-todos">
                     <h5>Todos</h5>
                 </button>
-                <button class="filters-panificadora">
+                <button id="panificadora" class="filters-panificadora">
                     <p>🍞</p>
                     <h5>Panificadora</h5>
                 </button>
-                <button class="filters-frutas">
+                <button id="frutas" class="filters-frutas">
                     <p>🍏</p>
                     <h5>Frutas</h5>
                 </button>
-                <button class="filters-bebidas">
+                <button id="bebidas" class="filters-bebidas">
                     <p>🍷</p>
                     <h5>Bebidas</h5>
                 </button>
             </div>
 
             <div class="vitrine">
-
-                <div class="vitrine-card">
-                    <img class="vitrine-img" src="./src/img/pancake.png">
-                    <h3>Panqueca de banana com aveia</h3>
-                    <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                    <span>Text Category</span>
-                    <div class="vitrine-buy">
-                        <h5>R$ 20,00</h5>
-                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
-                    </div>
-                </div>
-
-                <div class="vitrine-card">
-                    <img class="vitrine-img" src="./src/img/pancake.png">
-                    <h3>Panqueca de banana com aveia</h3>
-                    <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                    <span>Text Category</span>
-                    <div class="vitrine-buy">
-                        <h5>R$ 20,00</h5>
-                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
-                    </div>
-                </div>
-
-                <div class="vitrine-card">
-                    <img class="vitrine-img" src="./src/img/pancake.png">
-                    <h3>Panqueca de banana com aveia</h3>
-                    <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                    <span>Text Category</span>
-                    <div class="vitrine-buy">
-                        <h5>R$ 20,00</h5>
-                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
-                    </div>
-                </div>
-
-                <div class="vitrine-card">
-                    <img class="vitrine-img" src="./src/img/pancake.png">
-                    <h3>Panqueca de banana com aveia</h3>
-                    <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                    <span>Text Category</span>
-                    <div class="vitrine-buy">
-                        <h5>R$ 20,00</h5>
-                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
-                    </div>
-                </div>
-
-                <div class="vitrine-card">
-                    <img class="vitrine-img" src="./src/img/pancake.png">
-                    <h3>Panqueca de banana com aveia</h3>
-                    <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.</p>
-                    <span>Text Category</span>
-                    <div class="vitrine-buy">
-                        <h5>R$ 20,00</h5>
-                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
-                    </div>
-                </div>
-                
-                <div class="vitrine-card">
-                    <img class="vitrine-img" src="./src/img/pancake.png">
-                    <h3>Panqueca de banana com aveia</h3>
-                    <p>Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito,
-                        se não tiver outra opção de café. Se tiver mais comida, como pães e frutas.
-                    </p>
-                    <span>Text Category</span>
-                    <div class="vitrine-buy">
-                        <h5>R$ 20,00</h5>
-                        <button><i class="fa-solid fa-cart-arrow-down"></i></button>
-                    </div>
-                </div>
-
             </div>
 
         </div>
@@ -135,84 +61,21 @@
             </ul>
         </div>
 
-        <div class="cart-full">
-
-            <div class="cart-title">
-                <i class="fa-solid fa-cart-arrow-down"></i>
-                <h5>Carrinho</h5>
-            </div>
-
-            <div class="cart-full--cards">
+        <div class="container">
+            <div class="cart-full">
+                <span class="mobile-closebtn">X</span>
+                <div class="cart-title">
+                    <i class="fa-solid fa-cart-arrow-down"></i>
+                    <h5>Carrinho</h5>
+                </div>
                 
-                <div class="cart-full--card">
-                    <div class="cart-full--divimg">
-                        <img src="./src/img/pancake.png" class="cart-full-img">
-                    </div>
-
-                    <div class="cart-full--divinfo">
-                        <h3>Panqueca de banana</h3>
-                        <span>Panificadora</span>
-                        <h5>R$ 12,00</h5>
-                    </div>
-
-                    <div class="cart-full--divtrash">
-                        <button class="cart-full--trash"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
-                </div>
-
-                <div class="cart-full--card">
-                    <div class="cart-full--divimg">
-                        <img src="./src/img/pancake.png" class="cart-full-img">
-                    </div>
-
-                    <div class="cart-full--divinfo">
-                        <h3>Panqueca de banana</h3>
-                        <span>Panificadora</span>
-                        <h5>R$ 12,00</h5>
-                    </div>
-
-                    <div class="cart-full--divtrash">
-                        <button class="cart-full--trash"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
-                </div>
-
-                <div class="cart-full--card">
-                    <div class="cart-full--divimg">
-                        <img src="./src/img/pancake.png" class="cart-full-img">
-                    </div>
-
-                    <div class="cart-full--divinfo">
-                        <h3>Panqueca de banana</h3>
-                        <span>Panificadora</span>
-                        <h5>R$ 12,00</h5>
-                    </div>
-
-                    <div class="cart-full--divtrash">
-                        <button class="cart-full--trash"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
-                </div>
-
-                <div class="cart-full--card">
-                    <div class="cart-full--divimg">
-                        <img src="./src/img/pancake.png" class="cart-full-img">
-                    </div>
-
-                    <div class="cart-full--divinfo">
-                        <h3>Panqueca de banana</h3>
-                        <span>Panificadora</span>
-                        <h5>R$ 12,00</h5>
-                    </div>
+                <div class="cart-full--cards">
                     
-                    <div class="cart-full--divtrash">
-                        <button class="cart-full--trash"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
                 </div>
                 
+                <div class="cart-full--amount"><h5>Quantidade</h5><h5 id="total-items"></h5></div>
+                <div class="cart-full--total"><h5>Total</h5><h5 id="total-cart"></h5></div>
             </div>
-
-            <div class="cart-full--amount"><h5>Quantidade</h5><h5>2</h5></div>
-            <div class="cart-full--total"><h5>Total</h5><h5>R$ 12,00</h5></div>
-
         </div>
 
     </main>
@@ -222,7 +85,7 @@
             <h5>Carrinho</h5>
         </button>
         
-        <script type="module" src="./src/main.js"></script>
+        <script type="module" src="./src/js/home.js"></script>
 </body>
 
 </html>

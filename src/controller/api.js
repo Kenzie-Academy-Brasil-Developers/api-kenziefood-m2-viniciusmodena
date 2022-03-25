@@ -13,7 +13,7 @@ class Api {
             .then(response => {
                 console.log(response)
                 return response
-            })
+            }) 
             .catch(err => console.error(err))
         
         return response
@@ -59,7 +59,7 @@ class Api {
         return response
     }
 
-    static async createProduct (product, token) {
+    static async addMyProduct (product, token) {
         const response = await fetch(`${this.baseUrl}/my/products`, {
             "method": "POST",
             "headers": {
@@ -124,17 +124,16 @@ class Api {
         return response
     }
 
-    static async addProductToCart (productInfo, token) {
-        const response = await fetch(`${this.baseUrl}/cart`, {
+    static async addProductToCart(productInfo, token) {
+        const response = await fetch(`${this.baseUrl}/cart/add`, {
             "method": "POST",
             "headers": {
                 "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"
             },
-            "body": productInfo
+            "body": JSON.stringify(productInfo)
         })
             .then(response => {
-                console.log(response)
                 return response
             })
             .catch(err => console.error(err))
