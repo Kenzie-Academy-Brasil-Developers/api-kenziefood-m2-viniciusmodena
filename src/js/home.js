@@ -2,23 +2,6 @@ import { Api } from "../controller/api.js";
 import { Vitrine } from "../modules/vitrine.js";
 import { Carrinho } from "../modules/carrinho.js";
 
-
-
-const user = {
-  name: 'Modena',
-  email: 'modena@gmail.com',
-  password: 'equipe1'
-}
-
-// const novotoken = await Api.userLogin(user)
-
-// const stringnovotoken = JSON.stringify(novotoken)
-
-// localStorage.setItem('token', stringnovotoken)
-
-// localStorage.removeItem('token')
-
-
 const vitrine = document.querySelector(".vitrine");
 const cart = document.querySelector(".cart")
 const cartFull = document.querySelector(".cart-full")
@@ -31,6 +14,8 @@ const signOut = document.querySelector('.logout')
 const cartMobileBtn = document.querySelector('.cart--mobile')
 const mobileContainer = document.querySelector('.container')
 const cartMobileCloseBtn= document.querySelector('.mobile-closebtn')
+const userImg = document.querySelector('.header-icon')
+console.log(userImg)
 
 const publicProducts = await Api.getProducts()
 
@@ -47,6 +32,7 @@ class Load {
       const cartProducts = await Api.getCart(token)
       Carrinho.createCardsCarrinho(cartProducts, cartItems)
       this.updateTotal(cartProducts)
+      userImg.classList.remove('hidden')
 
 
     } else {
@@ -122,17 +108,17 @@ class Load {
 }
 
 const token = JSON.parse(localStorage.getItem('token'))
-signOut.classList.add('hidden')
 
 
 if (token) {
   Load.storageToApiCart()
-  signOut.classList.remove('hidden')
   signIn.classList.add('hidden')
 }
 
 await Load.page()
   .then(Load.cart)
+Load.cart()
+
 
 
 vitrine.addEventListener("click", async (evt) => {

@@ -1,6 +1,7 @@
-export class Vitrine {
-    static vitrine = document.querySelector('.content');
+export class Dashboard {
+    
     static createCard(obj,ul){
+
         //object={id,nome,preco,categoria,descricao,imagem,}
         const li =document.createElement("li")
         li.classList.add("card-dashboard")
@@ -22,8 +23,13 @@ export class Vitrine {
                         </div>
         `
         ul.appendChild(li)
+        
     }
     static createVitrini(list,ul){
+
+        ul.innerHTML = ''
+
+        console.log(list)
         list.forEach((object)=>{
             this.createCard(object,ul)
         })

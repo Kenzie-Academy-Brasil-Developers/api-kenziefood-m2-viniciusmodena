@@ -76,6 +76,8 @@ header p {
     position: absolute;
     width: 36px;
     height: 36px;
+    cursor: pointer;
+
 
     background: #C4C4C4;
     border-radius: 128.571px;
@@ -106,7 +108,7 @@ nav {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     right: 0px;
     top: -25px;
@@ -361,9 +363,10 @@ CARRINHO
     right: 23px;
     color: #fff;
 
-    font-family: 'Nunito',Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
     font-weight: 700;
-    size: 16px;;
+    size: 16px;
+    ;
     cursor: pointer;
 }
 
@@ -381,7 +384,7 @@ CARRINHO
     flex-direction: center;
     align-items: center;
     color: white;
-    
+
     background: #FF2253;
     border-radius: 0px;
     padding-left: 20px;
@@ -406,10 +409,6 @@ CARRINHO
     color: white;
 }
 
-.hidden {
-    display: none;
-}
-
 .modalContainer {
     width: 100vw;
     height: 100vh;
@@ -429,7 +428,7 @@ CARRINHO
 .cart-full--cards {
     height: 400px;
     overflow-y: auto;
-    padding-left:15px;
+    padding-left: 15px;
 }
 
 .cart-full--cards::-webkit-scrollbar {
@@ -561,11 +560,9 @@ CARRINHO
     background: white;
 }
 
-/* @media (min-height: 700px) {
-    .vitrine {
-        margin: 20px 0px 0px;
-    }
-} */
+.hidden {
+    display: none;
+}
 
 @media (min-width: 1150px) {
 
@@ -628,20 +625,15 @@ CARRINHO
 
 
     .header-icon {
-        height: 36px;
-        width: auto;
-        cursor: pointer;
-
-        position: absolute;
         right: -40px;
         top: 7px;
     }
 
     .header-rightside .login {
         position: absolute;
-        right: -40px;
-        top: 15px;
-
+        right: -80px;
+        top: 30px;
+        width: 80px;
     }
 
     .header-login {
@@ -650,7 +642,7 @@ CARRINHO
     }
 
     .header-menu--content {
-        top:0px;
+        top: 0px;
         left: -40px;
     }
 
@@ -663,7 +655,6 @@ CARRINHO
         height: 48px;
         left: 117px;
         top: 122px;
-
     }
 
     .filters-todos, .filters-panificadora, .filters-frutas, .filters-bebidas {
@@ -734,7 +725,7 @@ CARRINHO
         height: 56px;
         left: 1166px;
         top: 122px;
-    
+
         background: #FF2253;
         border-radius: 12px 12px 0px 0px;
 
@@ -790,11 +781,10 @@ CARRINHO
         display: none;
     }
 
-
-
     /* 
 CARRINHO FULL
 */
+
     .cart-full {
         display: block;
     }

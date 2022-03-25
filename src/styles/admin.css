@@ -6,7 +6,232 @@
 /*
 HEADER COPIAR DA HOME
 */
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
 header {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 72px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px -18px rgba(0, 0, 0, 0.25);
+}
+
+header p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  color: #868E96;
+  cursor: pointer;
+}
+
+.header-imgs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px 18px 0;
+}
+
+.header-img {
+  width: 122px;
+  height: 33px;
+}
+
+.header-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 18px 15px 16px;
+
+  margin: 36px auto 0;
+
+  width: 342px;
+  height: 49px;
+
+  background: #E9ECEF;
+  border: 1.5px solid #E9ECEF;
+  box-sizing: border-box;
+  border-radius: 12px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #868E96;
+
+  position: absolute;
+  top: -70px;
+  right: 150px;
+}
+
+.header-rightside {
+  position: relative;
+}
+
+.header-icon {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+
+  background: #C4C4C4;
+  border-radius: 128.571px;
+
+  top: -25px;
+  right: 20px;
+}
+
+.header-rightside .login {
+  position: absolute;
+  top: -25px;
+  right: 20px;
+}
+
+nav {
+  position: absolute;
+  top: -14px;
+  right: 10px;
+}
+
+.header-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.header-menu--content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0px;
+  top: -25px;
+}
+
+.header-menu--content a {
+  color: #868E96;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.header-menu--content a:hover {
+  background-color: #C4C4C4;
+}
+
+.header-menu:hover .header-menu--content {
+  display: block;
+}
+
+.header-menu:hover .dropbtn {
+  background-color: #3e8e41;
+}
+.filters {
+  display: flex;
+  flex-direction: row;
+  margin-left: 180px;
+}
+
+.filters-todos, .filters-panificadora, .filters-frutas, .filters-bebidas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  color:#000000;
+}
+
+.filters-todos {
+  justify-content: center;
+  width: 88px;
+  height: 48px;
+
+  background: #FF2253;
+
+  border: 1.5px solid #FF2253;
+  box-sizing: border-box;
+  border-radius: 32px;
+  margin: 0px 11px;
+}
+
+.filters-todos h5 {
+  color: white;
+}
+
+.filters-panificadora {
+  width: 170px;
+  height: 48px;
+  left: 110px;
+  top: 0px;
+
+  background: #FFF7F4;
+
+  border: 1.5px solid #FFF7F4;
+  box-sizing: border-box;
+  border-radius: 32px;
+
+  flex: none;
+  flex-grow: 0;
+  margin: 0px 11px;
+}
+
+.filters-frutas {
+  width: 123px;
+  height: 48px;
+  left: 302px;
+  top: 0px;
+
+  background: #FFF1F4;
+
+  border: 1.5px solid #FFF1F4;
+  box-sizing: border-box;
+  border-radius: 32px;
+  margin: 0px 11px;
+  flex: none;
+  flex-grow: 0;
+}
+
+.filters-bebidas {
+  width: 136px;
+  height: 48px;
+  left: 582px;
+  top: 122px;
+
+  background: #F3EEF5;
+
+  border: 1.5px solid #F3EEF5;
+  box-sizing: border-box;
+  border-radius: 32px;
+  margin: 0px 11px;
+  flex: none;
+  flex-grow: 0;
+}
+
+button{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: #212529;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* header {
   display: flex;
   justify-content: space-evenly;
   background: #FFFFFF;
@@ -43,12 +268,18 @@ header {
   font-size: 16px;
   line-height: 19px;
   color: #868E96;
-}
+} */
 /* MAIN */
 /* SECTION DE FILTER COPIAR DA HOME */
+
+main {
+  margin-top: 70px;
+}
+
 .main-buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .add-new-product-button {
   background-color: #FF2253;
@@ -56,13 +287,15 @@ header {
   border: none;
   border-radius: 32px;
   padding: 10px 15px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 19px;
   letter-spacing: 0em;
   text-align: center;
+  cursor: pointer;
+  margin-right: 180px;
 }
 /* DASHBOARD */
 .dashboard-section {
@@ -106,6 +339,7 @@ header {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0em;
+  padding: 9px;
 }
 .card-name {
   color: #212529;
@@ -141,8 +375,10 @@ header {
   width: 55%;
 }
 .card-product img {
-  width: 20px;
+  width: 32px;
+  height: 32px;
   padding: 5px;
+  border-radius: 50%;
 }
 .card-categories {
   width: 30%;
@@ -189,6 +425,13 @@ header {
 .action-button img {
   width: 20px;
 }
+
+.action-button img {
+  height: 23px;
+  width: auto;
+  margin: 0 10px;
+}
+
 .modal {
   display: flex;
   justify-content: center;
@@ -350,6 +593,7 @@ input[type="checkbox"]:checked + label {
   right: 50px;
   border-radius: 8px;
   width: 300px;
+  background-color: #FFF;
 }
 .modal-status,
 .section-header {
@@ -395,7 +639,8 @@ input[type="checkbox"]:checked {
  */
 @media (min-width: 480px) {
   .card-product img {
-    width: 7vw;
+    height: 32px;
+    width: 32px;
   }
   .card-header-product {
     width: 30%;
@@ -421,8 +666,11 @@ input[type="checkbox"]:checked {
     width: 25%;
   }
   .card-description {
-    display: block;
-    width: 30%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+    width: 300px;
   }
   .card-action {
     width: 15%;

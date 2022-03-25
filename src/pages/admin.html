@@ -10,31 +10,47 @@
 </head>
 <body>
     <header>
-        <div class="header-right">
+        <div class="header-imgs">
+            <img class="header-img" src="./../img/logo.png">
+        </div>
+        <div class="header-rightside">
             <input class="header-input" type="text" placeholder="Pesquisar por produto">
-            <img class="user-img" src="../img/user.png" alt="icone usuário">
+
+            <nav>
+                <div class="header-menu">
+                    <img class="header-icon" src="./../img/userIcon.png" alt="user login">
+                    <div class="header-menu--content">
+                        <a href="./../../index.html">Home</a>
+                        <a class="logout" href="#">Logout</a>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
+
     <main>
-        <section class="main-buttons">
-            <section class="filters">
-                <button class="filters-todos">
-                   Todos
+        <div class="content">
+
+            <div class="filters">
+                <button id="todos" class="filters-todos">
+                    Todos
                 </button>
-                <button class="filters-panificadora">
-                   Panificadora
+                <button id="panificadora" class="filters-panificadora">
+                    <p>🍞</p>
+                    Panificadora
                 </button>
-                <button class="filters-frutas">
+                <button id="frutas" class="filters-frutas">
+                    <p>🍏</p>
                     Frutas
                 </button>
-                <button class="filters-bebidas">
+                <button id="bebidas" class="filters-bebidas">
+                    <p>🍷</p>
                     Bebidas
-                <button class="add-product">
-                    Adicionar novo produto
                 </button>
-            </section>
+            </div>
+            
             <button class="add-new-product-button">Adicionar novo produto</button>
-        </section>
+        </div>
             <section class="dashboard-section">
                 <div class="dashboard-header">
                     <span class="card-header-product">Produto</span>
@@ -148,5 +164,6 @@
                 <p class="mesage">Ocorreu algum erro, o produto não foi adicionado</p>
         </div>
             <script type="module" src="./../admin.js"></script>
+    </main>
 </body>
 </html>
