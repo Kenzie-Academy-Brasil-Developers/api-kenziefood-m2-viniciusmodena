@@ -12,8 +12,10 @@ loginButton.addEventListener("click", async (evt) => {
   if (userEmail !== "" && userPassword !== "") {
     const user = { email: userEmail, password: userPassword };
 
-    const userToken = await Api.userLogin(user);
+    let userToken = await Api.userLogin(user);
     if (typeof userToken === "string") {
+
+      userToken = JSON.stringify(userToken)
       localStorage.setItem("token", userToken);
 
       window.location.href = "./../../index.html";

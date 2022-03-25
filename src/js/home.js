@@ -122,7 +122,6 @@ class Load {
 }
 
 const token = JSON.parse(localStorage.getItem('token'))
-
 signOut.classList.add('hidden')
 
 
@@ -132,8 +131,9 @@ if (token) {
   signIn.classList.add('hidden')
 }
 
-Load.page()
-setTimeout(Load.cart, 450)
+await Load.page()
+  .then(Load.cart)
+
 
 vitrine.addEventListener("click", async (evt) => {
   if (evt.target.tagName === "BUTTON" || evt.target.tagName === "I") {
@@ -279,7 +279,7 @@ searchInput.addEventListener("input", async () => {
 })
 
 signIn.addEventListener('click', () => {
-  window.location.href = "./../pages/login.html";
+  window.location.href = "./src/pages/login.html";
 })
 
 signOut.addEventListener('click', () => {
