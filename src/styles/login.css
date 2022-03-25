@@ -129,7 +129,7 @@ input {
   border: none;
   color: #000000;
 }
-.modal {
+.modal, .modal-invalid {
   width: 100vw;
   height: 100vh;
   background-color: #00000080;
@@ -160,6 +160,13 @@ input {
   padding: 0;
   margin: 0;
   align-self: flex-end;
+}
+
+.mesage{
+  padding: 20px;
+  background-color: #e9ecef;
+  border: 1.5px solid #ff2253;
+  border-radius: 4px;
 }
 
 .hidden {
