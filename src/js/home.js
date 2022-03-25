@@ -21,7 +21,7 @@ const user = {
 
 const vitrine = document.querySelector(".vitrine");
 const cart = document.querySelector(".cart")
-const emptyCart = document.querySelector(".cart-full")
+const cartFull = document.querySelector(".cart-full")
 const cartItems = document.querySelector(".cart-full--cards");
 
 const filterButtons = document.querySelector(".filters")
@@ -29,6 +29,8 @@ const searchInput = document.querySelector(".header-input")
 const signIn = document.querySelector('.login')
 const signOut = document.querySelector('.header-icon')
 const cartMobileBtn = document.querySelector('.cart--mobile')
+const mobileContainer = document.querySelector('.container')
+const cartMobileCloseBtn= document.querySelector('.mobile-closebtn')
 
 const publicProducts = await Api.getProducts()
 
@@ -37,9 +39,9 @@ class Load {
   static async page() {
 
     const token = JSON.parse(localStorage.getItem('token'))
-
     if (token) {
       const allProducts = await Api.getMyProducts(token);
+      console.log(allProducts)
       Vitrine.createCards(allProducts, vitrine);
 
       const cartProducts = await Api.getCart(token)
@@ -49,6 +51,7 @@ class Load {
 
     } else {
       const allProducts = await Api.getProducts();
+      console.log(allProducts)
       Vitrine.createCards(allProducts, vitrine);
 
       const cartProducts = JSON.parse(localStorage.getItem('cart'))
@@ -63,10 +66,10 @@ class Load {
 
     if (cartItems.childElementCount > 0) {
       cart.classList.add('hidden')
-      emptyCart.classList.remove('hidden')
+      cartFull.classList.remove('hidden')
     } else {
       cart.classList.remove('hidden')
-      emptyCart.classList.add('hidden')
+      cartFull.classList.add('hidden')
     }
   }
 
@@ -290,5 +293,13 @@ signOut.addEventListener('click', () => {
 })
 
 cartMobileBtn.addEventListener('click', () => {
-  
+  mobileContainer.classList.add('modalContainer')
+  cartFull.classList.add('modal')
+})
+
+cartMobileCloseBtn.addEventListener('click', () => {
+
+  mobileContainer.classList.remove('modalContainer')
+  cartFull.classList.remove('modal')
+
 })
