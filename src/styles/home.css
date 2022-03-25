@@ -323,6 +323,7 @@ CARRINHO
     font-family: 'Nunito',Arial, Helvetica, sans-serif;
     font-weight: 700;
     size: 16px;;
+    cursor: pointer;
 }
 
 .cart {
@@ -357,7 +358,7 @@ CARRINHO
     background: #FF2253;
     border-radius: 0px;
     border: none;
-
+    cursor: pointer;
 }
 
 .cart--mobile i, .cart--mobile h5 {
