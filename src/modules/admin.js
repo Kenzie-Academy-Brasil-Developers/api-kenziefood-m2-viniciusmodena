@@ -1,10 +1,12 @@
 import { Api   }   from "../controller/api.js";
 import { Modal } from "./modalAdmin.js";
 
+const token = localStorage.getItem('token');
 export class Vitrine {
     
     static vitrine = document.querySelector('.content');
-    static vitrineMaker ({nome, imagem, categoria, descricao}){
+    static prod  = {};
+    static vitrineMaker ({nome, imagem, categoria, descricao,id}){
 
         const li        = document.createElement('li');
         const divCard   = document.createElement('div');
@@ -29,7 +31,9 @@ export class Vitrine {
         divDesc.classList.add('card-description');
         divBtn.classList.add('card-buttons');
         btnEdit.classList.add("edit-product");
+        btnEdit.setAttribute('id',id);
         btnDlt.classList.add('delete-product');
+        btnDlt.setAttribute('id',id);
         imgBtnE.setAttribute('alt','');
         imgBtnE.setAttribute('src','img');
         imgBtnD.setAttribute('alt','');
@@ -65,27 +69,88 @@ export class Vitrine {
         });
     }
 
-    static async rgtProduct(event){
+    static modalRgt(event){
         const btn = event.target;
         if(btn.className === 'adc-product'){
             Modal.formRegister();
-
+            const btnForm = document.querySelector('.btnRegister'); 
+            btnForm.addEventListener('click',Vitrine.rgtProduct);
         }
-        // const newProduct = await Api.createProduct();
+        Api.createProduct(this.prod,token);
+        
     }
 
-    static async edtProduct(event){
+    static modalEdt(event){
         const btn = event.target;
         if(btn.className === "edit-product"){
             Modal.formEdit();
+            const btnForm = document.querySelector('.btnSave'); 
+            btnForm.addEventListener('click',Vitrine.edtProduct);
         }
+        Api.editProduct(btn.id,prod,token);
+        
+
     }
 
-    static async dltProduct(event){
+    static modalDlt(event){
         const btn = event.target;
         if(btn.className === 'delete-product'){
             Modal.formDelete();
         }
+        if(btn.className === 'btnDelete'){
+           event.preventDefault();
+           deleteProduct(btn.id,token);
+        }
+    }
+
+    static rgtProduct(event){
+        event.preventDefault();
+        let arr = [];
+        const form  = document.getElementsByClassName('productRegister');
+        for(let i=0; i<form[0].length;i++){
+            if(form[0][i].tagName!=='BUTTON'){
+                if(form[0][i].type === "checkbox"){
+                    const {checked} = form[0][i];
+                    if(checked){
+                        // console.log(form[0][i].name);
+                        arr['categoria'] = form[0][i].name;
+                    }
+                }
+                    else{
+                        const {value} = form[0][i];
+                        // console.log(value);
+                        arr[form[0][i].name] = value;
+                        
+                    }
+            }
+        }
+        prod = [...arr];
+        console.log(arr);
+    }
+
+    static edtProduct(e){
+        e.preventDefault();
+        let arr = [];
+        const form  = document.getElementsByClassName('productRegister');
+        for(let i=0; i<form[0].length;i++){
+            if(form[0][i].tagName!=='BUTTON'){
+                if(form[0][i].type === "checkbox"){
+                    const {checked} = form[0][i];
+                    if(checked){
+                        // console.log(form[0][i].name);
+                        arr['categoria'] = form[0][i].name;
+                    }
+                }
+                    else{
+                        const {value} = form[0][i];
+                        // console.log(value);
+                        arr[form[0][i].name] = value;
+                        
+                    }
+            }
+        }
+        prod = [...arr];
+        console.log(arr);
     }
 
 

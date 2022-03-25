@@ -8,14 +8,17 @@ export class Modal {
     static formBasic(form){
         const labelName    = document.createElement('label');
         const inputName    = document.createElement('input');
+        inputName.setAttribute('name','nome');
         const labelDescrip = document.createElement('label');
         const inputDescrip = document.createElement('input');
+        inputDescrip.setAttribute('name','descricao');
         const divCatg       = document.createElement('div');
         for(let i =0; i<Modal.arrCateg.length;i++){
             const labelCateg = document.createElement('label');
             const inputCateg = document.createElement('input');
             inputCateg.classList.add('btnForm');
             inputCateg.setAttribute("type", "checkbox");
+            inputCateg.setAttribute('name',Modal.arrCateg[i])
             labelCateg.setAttribute('for','btnForm');
             labelCateg.innerText = Modal.arrCateg[i];
 
@@ -24,8 +27,10 @@ export class Modal {
         }
         const labelValue   = document.createElement('label');
         const inputValue   = document.createElement('input');
+        inputValue.setAttribute('name','preco');
         const labelImage   = document.createElement('label');
         const inputImage   = document.createElement('input');
+        inputImage.setAttribute('name','imagem');
 
         inputName.classList.add('productName');
         inputDescrip.classList.add('descriptionProd');
@@ -60,6 +65,8 @@ export class Modal {
         h5.classList.add('nameModal');
         const btnClose  = document.createElement('button');
         btnClose.classList.add('closeModal');
+        form.appendChild(h5);
+        form.appendChild(btnClose);
 
         Modal.formBasic(form);
 
@@ -71,8 +78,7 @@ export class Modal {
         btnRegis.innerText = 'Cadastrar Produto';
 
 
-        form.appendChild(h5);
-        form.appendChild(btnClose);
+        
         form.appendChild(btnRegis);
         Modal.divModal.appendChild(form);
 
