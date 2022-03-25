@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <title>Kenzie Food</title>
+</head>
+<body>
+    <header>
+        <div class="header-imgs">
+            <img class="header-img" src="./../img/logo.png">
+        </div>
+        <div class="header-rightside">
+            <input class="header-input" type="text" placeholder="Pesquisar por produto">
+
+            <nav>
+                <div class="header-menu">
+                    <img class="header-icon" src="./../img/userIcon.png" alt="user login">
+                    <div class="header-menu--content">
+                        <a href="./../../index.html">Home</a>
+                        <a class="logout" href="#">Logout</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+
+            <div class="filters">
+                <button id="todos" class="filters-todos">
+                    Todos
+                </button>
+                <button id="panificadora" class="filters-panificadora">
+                    <p>🍞</p>
+                    Panificadora
+                </button>
+                <button id="frutas" class="filters-frutas">
+                    <p>🍏</p>
+                    Frutas
+                </button>
+                <button id="bebidas" class="filters-bebidas">
+                    <p>🍷</p>
+                    Bebidas
+                </button>
+            </div>
+            
+            <button class="add-new-product-button">Adicionar novo produto</button>
+        </div>
+            <section class="dashboard-section">
+                <div class="dashboard-header">
+                    <span class="card-header-product">Produto</span>
+                    <span class="card-header-category">Categoria</span>
+                    <span class="card-header-description">Descrição</span>
+                    <span class="card-header-actions">Ações</span>
+                </div>
+                <ul class="dashboard-list"></ul>
+            </section>
+            <!-- MODAL LOGOUT -->
+            <div class="profile-option hidden">
+                <div class="section-header">
+                    <h5 class="name-modal">Usuario</h5>
+                </div>
+                <div class="buttons-option">
+                    <button id="logout" class="gray">Logout</button>
+                </div>
+            </div>
+            <div id="modal-section"></div>
+            <!-- MODAL CADASTRAR PRODUTO -->
+            <!-- <div class="modal hidden" id="new-product-modal">
+                <section class="modal-section">
+                    <div class="section-header">
+                        <h5 class="name-modal">Cadastro de Produto</h5>
+                        <button class="close-modal">X</button>
+                    </div>
+                    <form class="product-register">
+                        <label for="productName">Nome do Produto</label>
+                        <input type="text" class="productName" name="productName" placeholder="Digitar o nome do produto">
+                        <label for="descriptionProd">Descrição</label>
+                        <input type="text" class="descriptionProd" name="descriptionProd" placeholder="Digitar a descrição do produto">
+                        <span>Categoria</span>
+                        <div class="category-options">
+                            <input type="checkbox" name="panificadora" value="panificadora" class="category">
+                            <label for="panificadora">Panificadora</label>
+                            <input type="checkbox" name="frutas" value="frutas" class="category">
+                            <label for="frutas">Frutas</label>
+                            <input type="checkbox" name="bebidas" value="bebidas" class="category">
+                            <label for="bebidas">Bebidas</label>
+                        </div>
+                        <label for="productValue">Valor do Produto</label>
+                        <input type="text" class="productValue" name="productValue" placeholder="Digitar o valor do produto">
+                        <label for="imageLink">Link da imagem</label>
+                        <input type="text" class="imageLink" name="imageLink" placeholder="Insira o link da imagem">
+                        <div class="buttons-option">
+                          <button id="btn-register" class="pink">Cadastrar Produto</button>
+                        </div>
+                    </form>
+                </section>
+            </div> -->
+            <!-- MODAL EDITAR PRODUTO -->
+            <!-- <div class="modal hidden edit-product-modal">
+                <section class="modal-section">
+                    <div class="section-header">
+                        <h5 class="name-modal">Edição de Produto</h5>
+                        <button class="close-modal">X</button>
+                    </div>
+                    <form class="product-edit">
+                        <label for="productName">Nome do Produto</label>
+                        <input type="text" class="productName" name="productName" placeholder="Digitar o nome do produto">
+                        <label for="descriptionProd">Descrição</label>
+                        <input type="text" class="descriptionProd" name="descriptionProd" placeholder="Digitar a descrição do produto">
+                        <span>Categoria</span>
+                        <div class="category-options">
+                            <input type="checkbox" name="panificadora" value="panificadora" class="btnForm">
+                            <label for="panificadora">Panificadora</label>
+                            <input type="checkbox" name="frutas" value="frutas" class="btnForm">
+                            <label for="frutas">Frutas</label>
+                            <input type="checkbox" name="bebidas" value="bebidas" class="btnForm">
+                            <label for="bebidas">Bebidas</label>
+                        </div>
+                        <label for="productValue">Valor do Produto</label>
+                        <input type="text" class="productValue" name="productValue" placeholder="Digitar o valor do produto">
+                        <label for="imageLink">Link da imagem</label>
+                        <input type="text" class="imageLink" name="imageLink" placeholder="Insira o link da imagem">
+                       <div class="buttons-option">
+                           <button id="btn-cancel-edit" class="gray">Excluir</button>
+                           <button id="btn-save-edit" class="pink">Salvar alterações</button>
+                       </div>
+                    </form>
+                </section>
+            </div> -->
+            <!-- MODAL EXCLUIR PRODUTO -->
+            <!-- <div class="modal hidden delete-product-modal">
+                <section class="modal-section">
+                    <div class="section-header">
+                        <h5 class="name-modal">Exclusão de produto</h5>
+                        <button class="close-modal">X</button>
+                    </div>
+                    <p>Tem certeza que deseja excluir?</p>
+                    <div class="buttons-option">
+                        <button id="btn-yes" class="gray">Sim</button>
+                        <button id="btn-no" class="gray">Não</button>
+                    </div>
+                </section>
+            </div> -->
+            <!-- MODAL STATUS OK -->
+            <div class="modal-status ok hidden" id="status-ok-modal">
+                    <div class="section-header">
+                        <h5 class="name-modal">Status</h5>
+                        <button class="close-modal">X</button>
+                    </div>
+                    <p class="mesage">Produto adicionado com sucesso</p>
+            </div>
+            <!-- MODAL STATUS NOT OK -->
+            <div class="modal-status not-ok hidden" id="status-not-ok-modal">
+                <div class="section-header">
+                    <h5 class="name-modal">Status</h5>
+                    <button class="close-modal">X</button>
+                </div>
+                <p class="mesage">Ocorreu algum erro, o produto não foi adicionado</p>
+        </div>
+            <script type="module" src="./../admin.js"></script>
+    </main>
+</body>
+</html>

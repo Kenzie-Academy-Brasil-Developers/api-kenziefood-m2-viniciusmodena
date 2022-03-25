@@ -76,6 +76,8 @@ header p {
     position: absolute;
     width: 36px;
     height: 36px;
+    cursor: pointer;
+
 
     background: #C4C4C4;
     border-radius: 128.571px;
@@ -88,6 +90,47 @@ header p {
     position: absolute;
     top: -25px;
     right: 20px;
+}
+
+nav {
+    position: absolute;
+    top: -14px;
+    right: 10px;
+}
+
+.header-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.header-menu--content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0px;
+    top: -25px;
+}
+
+.header-menu--content a {
+    color: #868E96;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.header-menu--content a:hover {
+    background-color: #C4C4C4;
+}
+
+.header-menu:hover .header-menu--content {
+    display: block;
+}
+
+.header-menu:hover .dropbtn {
+    background-color: #3e8e41;
 }
 
 /*
@@ -320,9 +363,10 @@ CARRINHO
     right: 23px;
     color: #fff;
 
-    font-family: 'Nunito',Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
     font-weight: 700;
-    size: 16px;;
+    size: 16px;
+    ;
     cursor: pointer;
 }
 
@@ -340,7 +384,7 @@ CARRINHO
     flex-direction: center;
     align-items: center;
     color: white;
-    
+
     background: #FF2253;
     border-radius: 0px;
     padding-left: 20px;
@@ -365,10 +409,6 @@ CARRINHO
     color: white;
 }
 
-.hidden {
-    display: none;
-}
-
 .modalContainer {
     width: 100vw;
     height: 100vh;
@@ -388,7 +428,7 @@ CARRINHO
 .cart-full--cards {
     height: 400px;
     overflow-y: auto;
-    padding-left:15px;
+    padding-left: 15px;
 }
 
 .cart-full--cards::-webkit-scrollbar {
@@ -520,11 +560,9 @@ CARRINHO
     background: white;
 }
 
-/* @media (min-height: 700px) {
-    .vitrine {
-        margin: 20px 0px 0px;
-    }
-} */
+.hidden {
+    display: none;
+}
 
 @media (min-width: 1150px) {
 
@@ -587,25 +625,25 @@ CARRINHO
 
 
     .header-icon {
-        height: 36px;
-        width: auto;
-        cursor: pointer;
-
-        position: absolute;
         right: -40px;
         top: 7px;
     }
 
     .header-rightside .login {
         position: absolute;
-        right: -40px;
-        top: 15px;
-
+        right: -80px;
+        top: 30px;
+        width: 80px;
     }
 
     .header-login {
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .header-menu--content {
+        top: 0px;
+        left: -40px;
     }
 
     /*
@@ -617,7 +655,6 @@ CARRINHO
         height: 48px;
         left: 117px;
         top: 122px;
-
     }
 
     .filters-todos, .filters-panificadora, .filters-frutas, .filters-bebidas {
@@ -688,7 +725,7 @@ CARRINHO
         height: 56px;
         left: 1166px;
         top: 122px;
-    
+
         background: #FF2253;
         border-radius: 12px 12px 0px 0px;
 
@@ -744,11 +781,10 @@ CARRINHO
         display: none;
     }
 
-
-
     /* 
 CARRINHO FULL
 */
+
     .cart-full {
         display: block;
     }
